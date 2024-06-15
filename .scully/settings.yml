@@ -1,0 +1,11 @@
+identifier: lcxcgefc00w35a4c
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: cs-blog
+homeFolder: D:\Chris\website\cs-blog
+distFolder: dist/cs-blog
+outDir: D:\Chris\website\cs-blog\dist\static
+handle404: ''
+allowErrorCollect: true

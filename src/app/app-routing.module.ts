@@ -15,6 +15,7 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'blog',
   },
+  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
   {
     path: '**',
     redirectTo: 'blog',
