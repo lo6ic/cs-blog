@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Scully build
+
+Run this command to build the Scully project `npx scully --project cs-blog`.
+
+Run this command to launch the Scully server `npx scully serve --project cs-blog`. Navigate to the static server url to view the application running in a browser.
