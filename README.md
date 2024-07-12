@@ -28,6 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Scully build
 
+Note: if you make a change to the Angular code, you need to run `ng build` before running this.
+
 Run this command to build the Scully project `npx scully --project cs-blog`.
 
 Run this command to launch the Scully server `npx scully serve --project cs-blog`. Navigate to the static server url to view the application running in a browser.
