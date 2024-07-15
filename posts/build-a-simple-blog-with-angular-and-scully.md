@@ -2,19 +2,28 @@
 title: Build a Simple Blog with Angular and Scully
 description: This tutorial will show you how to build a simple Angular blog with Scully.
 published: true
+datePublished: July 15th, 2024
 ---
 
 # Build a Simple Blog with Angular and Scully
 
+Date Published: July 15th, 2024
+
 ## Angular
 
-To create the boiler plate code for your app run this Angular command:
+### New App + Boiler Plate
+
+To create the boiler plate code for your app, run this Angular command:
 
 `ng new wt-blog --routing --style=scss`
 
 This will create a new directory titled 'wt-blog' (you can name this whatever you want, but be sure to use your updated 'title' throughout this tutorial). The --routing flag includes routing and the --style flag sets it to scss.
 
-You can now view and interact with the newly created Angular app through your choice of IDE (I use Visual Studio Code). Once opened in VSCode you can use the in-editor terminal to run commands via Terminal > New Terminal
+### Integrated Development Environment (IDE)
+
+You can now view and interact with the newly created Angular app through your choice of IDE (I use <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>). Once opened in VSCode, you can use the in-editor terminal to run commands via Terminal > New Terminal
+
+### Bootstrap
 
 From the new terminal (if running Windows, use PowerShell for your terminal) run this command:
 
@@ -26,11 +35,15 @@ To add bootstrap to your project open the src/styles.scss file and add this line
 
 `@import 'bootstrap/scss/bootstrap';`
 
+### Core Module
+
 Return to your terminal and run this command:
 
 `ng g module core`
 
 This will generate the module 'core' and place it here: src/app/core.module.ts
+
+### Header Component
 
 From the terminal run this command:
 
@@ -60,11 +73,15 @@ Open and update the newly created header.component.html file to look like this:
 
 This will be your applications "header" navigation bar. The class items use bootstrap for styling.
 
+### Shared Module
+
 Back to the terminal:
 
 `ng g module shared`
 
 This creates the shared module and places it in the src/app/shared directory.
+
+### Footer
 
 Next run the command:
 
@@ -84,6 +101,8 @@ Open the footer.component.html file and replace the contents with this:
 
 VSCode should give you an error message notifying you that the currentDate does not exist in the FooterComponent. Let's fix that.
 Open the footer.component.ts file and add: "currentDate = new Date();" to the FooterComponent class.
+
+### Hook Up the Core + Shared Modules
 
 Now we need to let Angular "know" about the Core and Shared Modules so open the src/app/app.module.ts file and in the "imports" array add "CoreModule" and "SharedModule".
 
@@ -109,6 +128,8 @@ import { SharedModule } from "./shared/shared.module";
 export class AppModule {}
 ```
 
+### The App Component
+
 Now let's put these together in the app.component.html file.
 
 Open src/app/app.component.html file and delete all the boiler plate code and replace it with this:
@@ -118,6 +139,8 @@ Open src/app/app.component.html file and delete all the boiler plate code and re
 ```
 
 This works because we have connected the CoreModule and SharedModule, which hold the header and footer code, to the "overall" application.
+
+### Serve It Up
 
 We can now view all our hard work by returning to the terminal and running the "ng serve" command. This creates a local Angular Live Development Server and will "serve" it to `http://localhost:4200` by default.
 
@@ -131,7 +154,9 @@ Once you have the Angular Live Development Server running, any code you change (
 
 For example, open the header.component.html file and add this class to the Angular Project a element: class="navbar-brand". Once you save it, it should refresh your browser with the changes.
 
-Let's open a new terminal by selecting the "+" sign in the termnal menu. This keeps the original terminal (with the server running) alive and gives us a new terminal to run commands from.
+### Contact Module
+
+Let's open a new terminal by selecting the "+" sign in the terminal menu. This keeps the original terminal (with the server running) alive and gives us a new terminal to run commands from.
 
 With the new command line open, run this command:
 
@@ -160,6 +185,8 @@ Open the contact.component.html file and replace the contents with this:
 
 This is our "Contact" page info. I simply included some info and links to Angular's official website. Next we need to let Angular know about it and add the code to the Routing module.
 
+### Routing!
+
 Open the src/app/app-routing.module.ts file and change the const routes to look like this:
 
 ```typescript
@@ -187,6 +214,8 @@ Open the app.component.html file and change it to look like this:
 
 We are almost ready to view it. Next we need to update the header navigation to show the contact code.
 
+### Activate the Routes
+
 Go back to the header.component.html file and change remove the 'href' property from the anchor element (a) for the Contact div and change it to:
 
 `routerLink="/contact" routerLinkActive="active"`
@@ -208,6 +237,8 @@ import { RouterModule } from "@angular/router";
 After everything is saved, you can now view your changes by clicking the "Contact" link in the navbar of your active browser. Yeah!
 
 Now to get the Articles link working!
+
+### Articles Module
 
 Return to the terminal and run:
 
@@ -237,6 +268,8 @@ This does a couple things. First, the "blank" path (/) will now always redirect 
 
 Now that we have the ground work for our Angular app, it is time to bring in Scully (<a href="https://scully.io/" target="_blank">https://scully.io/</a>).
 
+### Install Scully
+
 Run this command at your terminal (before running this, I hit ctrl+C in the Angular Live server terminal to stop it):
 
 `npm i @scullyio/init @scullyio/ng-lib @scullyio/scully @scullyio/scully-plugin-puppeteer --force`
@@ -246,6 +279,8 @@ Once that is finished installing, open the src/app/app.module.ts file and includ
 ```typescript
 import { ScullyLibModule } from "@scullyio/ng-lib";
 ```
+
+### Scully Config
 
 Let's create our Scully config file. Run this command in your PowerShell terminal (replace the "wt-blog" with whatever you initialized your app's title as):
 
@@ -266,6 +301,8 @@ export const config: ScullyConfig = {
 };
 ```
 
+### Scully Module
+
 Next, we need to create the Scully module for our posts. Back in PowerShell, run this:
 
 `ng generate @scullyio/init:markdown --project wt-blog`
@@ -281,6 +318,8 @@ Hit Enter for where you want them stored and under which routes for your request
 This command generates all the needed module components for your posts and will update the Scully config file we just created with the correct routes.
 
 Now let's implement the posts.
+
+### Post Implementation
 
 Open src/app/articles/articles.component.ts file and have it look like this:
 
@@ -322,6 +361,8 @@ Add this code to that file:
 
 Now, each time we view the articles route, we will see each post's title and description.
 
+### Angular Build and Scully Serve
+
 In the terminal, run:
 
 `ng build`
@@ -340,6 +381,8 @@ We can now serve the application using this command:
 Ctrl+click the static server url to open your application in a browser. Click around to make sure it is working.  
 Note: we won't see any articles because we haven't created them yet! Let's do that next!
 
+### Markdown
+
 Navigate to the posts directory for your application in your IDE. You should see a default Markdown file (.md) there. Change that file by deleting the slugs entry and changing the published property to true.
 
 After saving those changes, we need to restart the Scully server. Ctrl+C out of the running terminal and rerun the 'npx scully --project wt-blog' command (click the up arrow to get your command history for faster development!)
@@ -354,13 +397,15 @@ Congratulations on creating and viewing your first post!
 
 Next, we will create a new post with a title passed in as an argument to Scully.
 
-Quit your running terminal and run this command:
+### Create Post with Title
+
+Quit (Ctrl+c) your running terminal and run this command:
 
 `ng g @scullyio/init:post --name="Angular and Scully"`
 
 When it asks for the target folder, type 'posts' (without the quotes).
 
-Now you should see a brand new markdown file created in your posts directory with the title "Angular and Scully". Notice the description has been defaulted in as well as the default published status of 'false'.
+Now you should see a brand new markdown file created in your 'posts' directory with the title "Angular and Scully". Notice the description has been defaulted in as well as the default published status of 'false'.
 
 At this point we can play around with creating fake content to "fill in" the post. I like to use the lorem ipsum generater for these types of tasks (<a href="https://loremipsum.io/" target="_blank">https://loremipsum.io/</a>).
 
@@ -369,6 +414,10 @@ Generate your new fake content using the generater and copy-paste it to the "con
 Remember to change 'published' to true and remove the default generated slug.
 
 Feel free to give it a fake description and let's build it.
+
+### Scully-only Build and Serve
+
+Note: We only added Scully-related content, so we don't need to 'ng build' before this.
 
 Back in the PowerShell terminal rerun your scully build command:
 
@@ -382,6 +431,8 @@ Yeah! We have created our own article with the title "Angular and Scully"!
 
 Wait, what about that "ScullyIo content" header and "End of Content" footer on each article? Well, I'm glad you asked. :-)
 
+### Update Scully Template
+
 We can change that by opening this file 'src/app/posts/posts.component.html'.
 
 I simply deleted the header and footer content but be sure to leave this element:
@@ -394,7 +445,9 @@ That is where your content will be served. Once you make a change to the compone
 
 `ng build`
 
-Note: to view the markdown files as posts, you will need to run the npx scully command to build it, then run the scully server to view it.
+#### NOTES
+
+To view the markdown files as posts, you will need to run the npx scully command to build it, then run the scully server to view it.
 
 If you make a change to the Angular app, you will need to rebuild that via "ng build".
 
@@ -402,11 +455,14 @@ If you want to see Angular-only changes, you can run "ng serve" to view that cod
 
 However, I like to see the whole application running, so I build the Angular app and then run the Scully build and server commands to see the whole application together.
 
+## Congrats
+
 Congratulations on creating your simple blog using Angular and Scully! Now get out there, play around with it, and build something!
 
 Cheers!
+<br><br>
 
-Resources:
+## Resources
 
 - Angular: <a href="https://angular.dev/" target="_blank">https://angular.dev/</a>
 - Scully: <a href="https://scully.io/" target="_blank">https://scully.io/</a>
@@ -414,5 +470,5 @@ Resources:
 - Markdown: <a href="https://www.markdownguide.org/getting-started/" target="_blank">https://www.markdownguide.org/getting-started/</a>
 
 - Huge shout-out to this YouTube video: <a href="https://www.youtube.com/watch?v=bVHQC37lsm4" target="_blank">https://www.youtube.com/watch?v=bVHQC37lsm4</a>
-  This post is essentially a post describing everything this YouTube content creater (Pig Learning) has shown in the video.  
+  This blog article is essentially a post describing everything this YouTube content creater (Pig Learning) has shown in the video.  
   All credit to that content creator. Please visit their channel and subscribe here: <a href="https://www.youtube.com/@piglearning" target="_blank">https://www.youtube.com/@piglearning</a>
