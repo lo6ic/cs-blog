@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ContactModule } from './contact/contact.module';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ResumeModule } from './resume/resume.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     CoreModule,
     SharedModule,
     ContactModule,
+    ResumeModule,
     ScullyLibModule,
   ],
   providers: [],
