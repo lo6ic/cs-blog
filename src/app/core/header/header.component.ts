@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   themeSwitch() {
     let htmlContainer = document.getElementById('oHTML');
-    let nowTheme = htmlContainer?.getAttribute('data-bs-theme');
+    let nowTheme = htmlContainer?.getAttribute('data-theme');
     if (nowTheme == 'dark') {
-      htmlContainer?.setAttribute('data-bs-theme', 'light');
+      htmlContainer?.setAttribute('data-theme', 'fantasy');
     } else {
-      htmlContainer?.setAttribute('data-bs-theme', 'dark');
+      htmlContainer?.setAttribute('data-theme', 'dark');
     }
   }
 }
