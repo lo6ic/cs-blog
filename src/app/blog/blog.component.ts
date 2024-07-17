@@ -5,7 +5,7 @@ import { Observable, map } from 'rxjs';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss'],
+  styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent {
   posts$: Observable<ScullyRoute[]> | undefined;

@@ -6,7 +6,7 @@ declare var ng: any;
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss'],
+  styleUrls: ['./posts.component.css'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated,
 })
