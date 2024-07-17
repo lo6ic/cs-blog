@@ -1,5 +1,9 @@
 <app-header></app-header>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="container mx-auto">
+  <main class="min-h-screen flex flex-col justify-between">
+    <section class="flex-grow">
+      <router-outlet></router-outlet>
+    </section>
+    <app-footer></app-footer>
+  </main>
 </div>
-<app-footer></app-footer>

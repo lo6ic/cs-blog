@@ -32,6 +32,7 @@
     "@angular/cli": "^16.2.10",
     "@angular/compiler-cli": "^16.2.0",
     "@k9n/scully-plugin-toc": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.13",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.12.10",

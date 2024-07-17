@@ -2,9 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    container: {
+      padding: '2rem',
+    },
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
     themes: ["fantasy", "dark"], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "dark", // name of one of the included themes for dark mode
