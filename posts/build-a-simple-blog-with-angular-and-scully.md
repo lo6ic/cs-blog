@@ -15,9 +15,13 @@ Date Published: July 15th, 2024
 
 ## Prerequisites
 
-- NPM [npmjs.com](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- Node.js [nodejs.org](https://nodejs.org/en/download/package-manager)
-- Angular [angular.dev](https://angular.dev/tools/cli/setup-local)
+[Top](posts/build-a-simple-blog-with-angular-and-scully#build-a-simple-blog-with-angular-and-scully)
+
+These are all necessary to follow along with this tutorial:
+
+- <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">NPM</a>
+- <a href="https://nodejs.org/en/download/package-manager" target="_blank">Node.js</a>
+- <a href="https://angular.dev/tools/cli/setup-local" target="_blank">Angular</a>
 
 ## Angular
 
@@ -25,17 +29,17 @@ Date Published: July 15th, 2024
 
 [Top](posts/build-a-simple-blog-with-angular-and-scully#build-a-simple-blog-with-angular-and-scully)
 
-To create the boiler plate code for your app, run this Angular command:
+To create the boiler plate code for your app, run this Angular command in your terminal:
 
 `ng new wt-blog --routing --style=scss`
 
-This will create a new directory titled 'wt-blog' (you can name this whatever you want, but be sure to use your updated 'title' throughout this tutorial). The --routing flag includes routing and the --style flag sets it to scss.
+This will create a new directory titled 'wt-blog' (you can name this whatever you want, but be sure to use your updated 'title' throughout this tutorial). All the necessary Angular code will be placed in the directory. The --routing flag tells the CLI to include routing, in the Angular app, and the --style flag sets your style sheets to use scss.
 
 ### Integrated Development Environment (IDE)
 
 [Top](posts/build-a-simple-blog-with-angular-and-scully#build-a-simple-blog-with-angular-and-scully)
 
-You can now view and interact with the newly created Angular app through your choice of IDE (I use <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>). Once opened in VSCode, you can use the in-editor terminal to run commands via Terminal > New Terminal
+You can now view and interact with the newly created Angular app through your choice of IDE (I use <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>). Run VS Code and open the newly created 'wt-blog' directory. Now, you can use the in-editor terminal to run commands via Terminal > New Terminal
 
 ### Bootstrap
 
@@ -45,7 +49,7 @@ From the new terminal (if running Windows, use PowerShell for your terminal) run
 
 `npm i bootstrap`
 
-This will download and install the bootstrap packages. More info here: <a href="https://getbootstrap.com" target="_blank">https://getbootstrap.com/</a>
+This will download and install the bootstrap packages. More info here: <a href="https://getbootstrap.com/docs/5.0/getting-started/download/" target="_blank">https://getbootstrap.com/</a>
 
 To add bootstrap to your project open the src/styles.scss file and add this line:
 
@@ -532,6 +536,7 @@ Cheers!
 - Scully: <a href="https://scully.io/" target="_blank">https://scully.io/</a>
 - Bootstrap: <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
 - Markdown: <a href="https://www.markdownguide.org/getting-started/" target="_blank">https://www.markdownguide.org/getting-started/</a>
+- Visual Studio Code: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
 
 - Huge shout-out to this YouTube video: <a href="https://www.youtube.com/watch?v=bVHQC37lsm4" target="_blank">https://www.youtube.com/watch?v=bVHQC37lsm4</a>
   This blog article is essentially a post describing everything this YouTube content creater (Pig Learning) has shown in the video.  
