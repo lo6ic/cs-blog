@@ -1,8 +1,7 @@
-<div class="list-group mt-3">
-  <a *ngFor="let item of posts$ | async" [routerLink]="item.route" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{ item.title }} | {{ item["datePublished"] }}</h5>
-    </div>
-    <p class="mb-1">{{ item["description"] }}</p>
-  </a>
+<div *ngFor="let item of posts$ | async">
+  <article>
+    <h3><a [routerLink]="item.route">{{item.title}}</a></h3>
+    <p>{{item["datePublished"]}}</p>
+    <p>{{item["description"]}}</p>
+  </article>
 </div>

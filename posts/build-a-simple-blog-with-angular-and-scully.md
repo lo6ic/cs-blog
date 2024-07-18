@@ -1,6 +1,6 @@
 ---
 title: Build a Simple Blog with Angular and Scully
-description: This tutorial will show you how to build a simple Angular blog with Scully.
+description: A tutorial which will walk you through the steps to build a blog with Angular and Scully.  Step-by-step instructions and resources.  Get in here and learn!
 published: true
 datePublished: July 15th, 2024
 ---
@@ -12,6 +12,12 @@ Date Published: July 15th, 2024
 <div id="toc">
   <h2>Table of contents</h2>
 </div>
+
+## Prerequisites
+
+- NPM [npmjs.com](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- Node.js [nodejs.org](https://nodejs.org/en/download/package-manager)
+- Angular [angular.dev](https://angular.dev/tools/cli/setup-local)
 
 ## Angular
 
