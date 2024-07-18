@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@hakimio/ngx-google-analytics": "^15.0.0",
     "@scullyio/init": "^2.1.41",
     "@scullyio/ng-lib": "^2.1.41",
     "@scullyio/scully": "^2.1.41",
