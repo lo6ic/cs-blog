@@ -5,12 +5,25 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
-  { path: 'contact', component: ContactComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'resume', component: ResumeComponent },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    title: 'Christopher Schedler - Contact',
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    title: 'Christopher Schedler - About',
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent,
+    title: 'Christopher Schedler - Resume',
+  },
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
+    title: 'Christopher Schedler - Blog',
   },
   {
     path: '',
