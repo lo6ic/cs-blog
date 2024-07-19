@@ -17,7 +17,7 @@ setPluginConfig(TocPluginName, tocOptions);
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'cs-blog',
-  outDir: './dist/static',
+  outDir: './docs',
   routes: {
     '/posts/:id': {
       type: 'contentFolder',

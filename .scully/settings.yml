@@ -6,6 +6,6 @@ hostName: localhost
 projectName: cs-blog
 homeFolder: D:\Chris\website\cs-blog
 distFolder: dist/cs-blog
-outDir: D:\Chris\website\cs-blog\dist\static
+outDir: D:\Chris\website\cs-blog\docs
 handle404: ''
 allowErrorCollect: true
