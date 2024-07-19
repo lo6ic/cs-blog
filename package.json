@@ -7,11 +7,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href='https://lo6ic.github.io/cs-blog/'",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully": "npx scully --project cs-blog",
+    "scully:serve": "npx scully serve --project cs-blog"
   },
   "private": true,
   "dependencies": {
