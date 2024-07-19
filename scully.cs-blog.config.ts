@@ -3,6 +3,10 @@ import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import '@scullyio/scully-plugin-puppeteer';
 import '@k9n/scully-plugin-toc';
 import { TocConfig, TocPluginName } from '@k9n/scully-plugin-toc';
+import { baseHrefRewrite } from '@scullyio/scully-plugin-base-href-rewrite';
+
+const defaultPostRenderers = ['seoHrefOptimise', baseHrefRewrite];
+setPluginConfig(baseHrefRewrite, { href: 'https://lo6ic.github.io/cs-blog/' });
 
 const tocOptions: TocConfig = {
   blogAreaSelector: '.blog-content', // where to search for TOC headings
@@ -18,6 +22,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'cs-blog',
   outDir: './docs',
+  defaultPostRenderers,
   routes: {
     '/posts/:id': {
       type: 'contentFolder',
