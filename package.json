@@ -8,6 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production --base-href='https://lo6ic.github.io/cs-blog/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "scully": "npx scully --project cs-blog",
