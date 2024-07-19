@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: cmgriffing/scully-gh-pages-action@v11-test1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "21.5.0"
+      - uses: cmgriffing/scully-gh-pages-action@v10
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
