@@ -2,12 +2,12 @@
 title: Build a Simple Blog with Angular and Scully
 description: A tutorial which will walk you through the steps to build a blog with Angular and Scully.  Step-by-step instructions and resources.  Get in here and learn!
 published: true
-datePublished: July 18th, 2024
+datePublished: July 19th, 2024
 ---
 
 # Build a Simple Blog with Angular and Scully
 
-Date Published: July 18th, 2024
+Date Published: July 19th, 2024
 
 <div id="toc">
   <h2>Table of contents</h2>
