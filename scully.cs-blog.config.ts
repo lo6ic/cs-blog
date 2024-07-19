@@ -6,7 +6,7 @@ import { TocConfig, TocPluginName } from '@k9n/scully-plugin-toc';
 import { baseHrefRewrite } from '@scullyio/scully-plugin-base-href-rewrite';
 
 const defaultPostRenderers = ['seoHrefOptimise', baseHrefRewrite];
-setPluginConfig(baseHrefRewrite, { href: 'https://lo6ic.github.io/cs-blog/' });
+setPluginConfig(baseHrefRewrite, { href: 'https://christopherschedler.com/' });
 
 const tocOptions: TocConfig = {
   blogAreaSelector: '.blog-content', // where to search for TOC headings
