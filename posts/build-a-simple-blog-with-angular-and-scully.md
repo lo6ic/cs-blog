@@ -7,7 +7,7 @@ datePublished: July 19th, 2024
 
 # Build a Simple Blog with Angular and Scully
 
-Date Published: July 19th, 2024
+July 19th, 2024
 
 <div id="toc">
   <h2>Table of contents</h2>
