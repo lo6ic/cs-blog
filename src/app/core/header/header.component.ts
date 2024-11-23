@@ -9,7 +9,7 @@ export class HeaderComponent {
     let htmlContainer = document.getElementById('oHTML');
     let nowTheme = htmlContainer?.getAttribute('data-theme');
     if (nowTheme == 'dark') {
-      htmlContainer?.setAttribute('data-theme', 'fantasy');
+      htmlContainer?.setAttribute('data-theme', 'light');
     } else {
       htmlContainer?.setAttribute('data-theme', 'dark');
     }
