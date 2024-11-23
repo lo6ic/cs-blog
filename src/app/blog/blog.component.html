@@ -1,5 +1,5 @@
 <div *ngFor="let item of posts$ | async">
-  <article>
+  <article *ngIf="item['datePublished']">
     <h3><a [routerLink]="item.route">{{item.title}}</a></h3>
     <p>{{item["datePublished"]}}</p>
     <p>{{item["description"]}}</p>

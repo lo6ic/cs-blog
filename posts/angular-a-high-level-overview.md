@@ -2,7 +2,7 @@
 title: Angular A High-Level Overview
 description: A high-level overview for Angular and what it is capable of!
 published: true
-datePublished: November 20th, 2024
+datePublished: November 20, 2024
 ---
 
 ### **Angular: A High-Level Overview**

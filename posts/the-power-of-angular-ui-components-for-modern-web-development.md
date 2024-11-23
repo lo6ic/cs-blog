@@ -2,7 +2,7 @@
 title: The Power of Angular UI Components for Modern Web Development
 description: Lock in and learn the overall power of Angular UI.
 published: true
-datePublished: November 23rd, 2024
+datePublished: November 23, 2024
 ---
 
 ### **The Power of Angular UI Components for Modern Web Development**
