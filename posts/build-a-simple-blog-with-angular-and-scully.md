@@ -5,7 +5,7 @@ published: true
 datePublished: July 19, 2024
 ---
 
-# Build a Simple Blog with Angular and Scully
+## **Build a Simple Blog with Angular and Scully**
 
 July 19th, 2024
 
@@ -13,7 +13,7 @@ July 19th, 2024
   <h2>Table of contents</h2>
 </div>
 
-## Prerequisites
+### Prerequisites
 
 [Top](posts/build-a-simple-blog-with-angular-and-scully#build-a-simple-blog-with-angular-and-scully)
 
