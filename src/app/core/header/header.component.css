@@ -1,0 +1,7 @@
+.btn-ghost.btn-active,
+.btn-ghost:hover {
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 0.2;
+  background-color: #00d7c0 !important;
+  color: #1d232a;
+}
