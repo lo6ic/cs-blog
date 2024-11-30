@@ -21,7 +21,7 @@ Angular is a TypeScript-based framework for building modern web applications. It
 
 - **UI Components:** Angular allows developers to create reusable components that are modular and maintainable. See my post about UI Components <a href="https://www.christopherschedler.com/posts/the-power-of-angular-ui-components-for-modern-web-development">here</a>.
 - **Routing:** Angular comes with a powerful routing module that handles navigation between different views or pages in an SPA. See my post about routing <a href="https://www.christopherschedler.com/posts/mastering-angular-routing-navigating-your-web-application-with-ease">here</a>.
-- **Forms:** Angular simplifies the creation and management of both template-driven and reactive forms, including form validation.
+- **Forms:** Angular simplifies the creation and management of both template-driven and reactive forms, including form validation. See my post about forms <a href="https://www.christopherschedler.com/posts/mastering-angular-forms-template-driven-vs.-reactive-forms">here</a>.
 - **HTTP Services:** It offers a built-in HTTP client to interact with external APIs, making it easier to send requests and handle responses.
 - **Dependency Injection (DI):** Angular's DI system helps manage and inject services and components efficiently, promoting modularity and testability.
 - **Two-way Data Binding:** Angular allows synchronization of data between the model and the view, ensuring that any changes in one are reflected in the other.
