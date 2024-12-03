@@ -3,6 +3,7 @@ import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -40,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'blog',
+    component: NotFoundComponent,
   },
 ];
 

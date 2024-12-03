@@ -13,9 +13,10 @@ import {
   provideGoogleAnalytics,
   provideGoogleAnalyticsRouter,
 } from '@hakimio/ngx-google-analytics';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
