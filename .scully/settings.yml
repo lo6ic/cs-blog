@@ -4,8 +4,8 @@ staticPort: 1668
 reloadPort: 2667
 hostName: localhost
 projectName: cs-blog
-homeFolder: D:\Chris\website\cs-blog
+homeFolder: /Users/chrisschedler/Website/cs-blog
 distFolder: dist/cs-blog
-outDir: D:\Chris\website\cs-blog\docs
+outDir: /Users/chrisschedler/Website/cs-blog/docs
 handle404: ''
 allowErrorCollect: true
