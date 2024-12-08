@@ -24,7 +24,7 @@ Angular is a TypeScript-based framework for building modern web applications. It
 - **Forms:** Angular simplifies the creation and management of both template-driven and reactive forms, including form validation. See my post about forms <a href="https://www.christopherschedler.com/posts/mastering-angular-forms-template-driven-vs.-reactive-forms">here</a>.
 - **HTTP Services:** It offers a built-in HTTP client to interact with external APIs, making it easier to send requests and handle responses. See my post about HTTP Services <a href="https://www.christopherschedler.com/posts/angular-http-services-and-api-integration">here</a>.
 - **Dependency Injection (DI):** Angular's DI system helps manage and inject services and components efficiently, promoting modularity and testability. See my post about Dependency Injection <a href="https://www.christopherschedler.com/posts/understanding-dependency-injection-in-angular">here</a>.
-- **Two-way Data Binding:** Angular allows synchronization of data between the model and the view, ensuring that any changes in one are reflected in the other.
+- **Two-way Data Binding:** Angular allows synchronization of data between the model and the view, ensuring that any changes in one are reflected in the other. See my post about Two-way Data Binding <a href="https://www.christopherschedler.com/posts/a-guide-to-understanding-angular's-two-way-binding">here</a>.
 - **Directives and Pipes:** Directives are used to manipulate the DOM, while pipes allow data formatting within the template.
 
 These features and more are bundled within Angular, enabling developers to focus on building the application's business logic and functionality rather than having to integrate different libraries for each of these tasks.
