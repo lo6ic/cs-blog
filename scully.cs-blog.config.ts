@@ -22,7 +22,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'cs-blog',
   outDir: './docs',
-  defaultPostRenderers,
+  //defaultPostRenderers,
   routes: {
     '/posts/:id': {
       type: 'contentFolder',
