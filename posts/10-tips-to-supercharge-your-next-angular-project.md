@@ -196,4 +196,6 @@ Angular is not just a framework; it’s a powerful toolset that empowers develop
 
 #### Note:
 
-*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>. Fully vetted and updated by me! :-)*
+*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+
+- *OpenAI. (2024). ChatGPT (Dec 10 version) [Large language model]. https://chat.openai.com/chat.*

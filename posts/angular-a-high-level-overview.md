@@ -82,4 +82,6 @@ Angular is a feature-rich, scalable, and maintainable framework that empowers de
 
 #### Note:
 
-This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>. Fully vetted and updated by me! :-)
+*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+
+- *OpenAI. (2024). ChatGPT (Nov 20 version) [Large language model]. https://chat.openai.com/chat.*
