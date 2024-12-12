@@ -3,6 +3,7 @@ title: "Mastering Angular Routing: Navigating Your Web Application with Ease"
 description: Routing is one of the greatest features of Angular.  Come learn about this awesome tool.
 published: true
 datePublished: November 25, 2024
+picture: "assets/posts/arrow.jpg"
 ---
 
 ### **Mastering Angular Routing: Navigating Your Web Application with Ease**

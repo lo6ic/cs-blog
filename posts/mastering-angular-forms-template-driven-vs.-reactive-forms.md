@@ -3,6 +3,7 @@ title: "Mastering Angular Forms: Template-Driven vs. Reactive Forms"
 description: Angular provides two amazing ways to deal with forms.  Check out the Template-driven and Reactive forms in this blog post.
 published: true
 datePublished: November 30, 2024
+picture: "assets/posts/forms.jpg"
 ---
 
 ### **Mastering Angular Forms: Template-Driven vs. Reactive Forms**

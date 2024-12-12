@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
-declare var ng: any;
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 
 @Component({
   selector: 'app-posts',
@@ -11,7 +11,22 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class PostsComponent implements OnInit {
-  ngOnInit() {}
+  route: ScullyRoute | undefined;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private scully: ScullyRoutesService, private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    let photoTop = document.getElementById('photo-top');
+
+    this.activatedRoute.params.subscribe(params => {
+      this.scully.getCurrent().subscribe(route => {
+        this.route = route;
+        if(this.route['picture']){
+          if(photoTop){
+            photoTop.style.backgroundImage = 'url(' + this.route['picture'] + ')';
+          }
+        }
+      });
+    });
+  }
 }

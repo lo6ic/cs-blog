@@ -3,6 +3,7 @@ title: "Angular HTTP Services and API Integration"
 description: "Angular HTTP Services, setup, usage, and best practices."
 published: true
 datePublished: December 3, 2024
+picture: "assets/posts/api.jpg"
 ---
 
 ### **Angular HTTP Services and API Integration**

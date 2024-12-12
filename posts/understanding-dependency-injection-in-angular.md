@@ -3,6 +3,7 @@ title: Understanding Dependency Injection in Angular
 description: Come learn about Dependency Injection with Angular!
 published: true
 datePublished: December 5, 2024
+picture: "assets/posts/cords.jpg"
 ---
 
 ### **Understanding Dependency Injection in Angular**

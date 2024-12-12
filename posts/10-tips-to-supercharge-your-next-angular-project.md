@@ -3,6 +3,7 @@ title: 10 Tips to Supercharge Your Next Angular Project
 description: "Ten tips to remember when going at your next Angular project!"
 published: true
 datePublished: December 11, 2024
+picture: "assets/posts/super.jpg"
 ---
 
 ### **10 Tips to Supercharge Your Next Angular Project**
