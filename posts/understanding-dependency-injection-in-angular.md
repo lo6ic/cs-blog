@@ -249,4 +249,6 @@ Start leveraging Angular’s DI system today to write cleaner, modular, and robu
 
 #### Note:
 
-This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>. Fully vetted and updated by me! :-)
+*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+
+- *OpenAI. (2024). ChatGPT (Dec 5 version) [Large language model]. https://chat.openai.com/chat.*
