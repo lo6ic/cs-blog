@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
   aboutSrc = '../../assets/about.jpg';
   ngOnInit(): void {
-    let paraTop = document.getElementById('para-top');
+    let paraTop = document.getElementById('photo-top');
     if (paraTop) {
       paraTop.style.backgroundImage = 'url(' + this.aboutSrc + ')';
     }

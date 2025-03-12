@@ -12,7 +12,7 @@ export class BlogComponent implements OnInit {
   posts$: Observable<ScullyRoute[]> | undefined;
   constructor(private scullyService: ScullyRoutesService) {}
   ngOnInit(): void {
-    let paraTop = document.getElementById('para-top');
+    let paraTop = document.getElementById('photo-top');
     if (paraTop) {
       paraTop.style.backgroundImage = 'url(' + this.blogSrc + ')';
     }

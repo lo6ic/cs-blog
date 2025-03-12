@@ -3,6 +3,7 @@ title: Mastering Directives and Pipes in Angular
 description: "Learn all about DOM manipulation and transformation in this article on Directives and Pipes."
 published: true
 datePublished: December 8, 2024
+picture: "assets/posts/timeforchange.jpg"
 ---
 
 ### **Mastering Directives and Pipes in Angular**
@@ -260,4 +261,6 @@ Directives and pipes are fundamental to Angular development. They enable powerfu
 
 #### Note:
 
-This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>. Fully vetted and updated by me! :-)
+*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+
+- *OpenAI. (2024). ChatGPT (Dec 8 version) [Large language model]. https://chat.openai.com/chat.*

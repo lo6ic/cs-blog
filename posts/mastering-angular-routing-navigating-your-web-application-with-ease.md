@@ -3,6 +3,7 @@ title: "Mastering Angular Routing: Navigating Your Web Application with Ease"
 description: Routing is one of the greatest features of Angular.  Come learn about this awesome tool.
 published: true
 datePublished: November 25, 2024
+picture: "assets/posts/arrow.jpg"
 ---
 
 ### **Mastering Angular Routing: Navigating Your Web Application with Ease**
@@ -187,4 +188,6 @@ Ready to take your Angular app to the next level? Start exploring advanced routi
 
 #### Note:
 
-This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>. Fully vetted and updated by me! :-)
+*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+
+- *OpenAI. (2024). ChatGPT (Nov 25 version) [Large language model]. https://chat.openai.com/chat.*
