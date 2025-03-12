@@ -331,6 +331,7 @@ import { ScullyLibModule } from "@scullyio/ng-lib";
 [Top](posts/build-a-simple-blog-with-angular-and-scully#build-a-simple-blog-with-angular-and-scully)
 
 Let's create our Scully config file. Run this command in your PowerShell terminal (replace the "wt-blog" with whatever you initialized your app's title as):
+Note: this command only works in PowerShell. If you are not using PowerShell, you can manually create the file and place it in the root of your project.
 
 `new-item scully.wt-blog.config.ts`
 
@@ -355,7 +356,7 @@ export const config: ScullyConfig = {
 
 Next, we need to create the Scully module for our posts. Back in PowerShell, run this:
 
-`ng generate @scullyio/init:markdown --project wt-blog`
+`ng generate @scullyio/init:markdown --project wt-blog` <---- Change 'wt-blog' to your project name
 
 It will give you a couple prompts:
 
@@ -464,6 +465,8 @@ Quit (Ctrl+c) your running terminal and run this command:
 When it asks for the target folder, type 'posts' (without the quotes).
 
 Now you should see a brand new markdown file created in your 'posts' directory with the title "Angular and Scully". Notice the description has been defaulted in as well as the default published status of 'false'.
+
+Note: if the command doesn't work, you can simply create a new '.md' file in the source folder.
 
 At this point we can play around with creating fake content to "fill in" the post. I like to use the lorem ipsum generater for these types of tasks (<a href="https://loremipsum.io/" target="_blank">https://loremipsum.io/</a>).
 
