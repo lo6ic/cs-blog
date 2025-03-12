@@ -190,7 +190,8 @@ export class AppModule {}
 <pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { ScullyLibModule } from "@scullyio/ng-lib";
 </code></pre>
 <h3 id="scully-config" _ngcontent-ng-c2071492969="">Scully Config</h3>
-<p _ngcontent-ng-c2071492969="">Let's create our Scully config file. Run this command in your PowerShell terminal (replace the "wt-blog" with whatever you initialized your app's title as):</p>
+<p _ngcontent-ng-c2071492969="">Let's create our Scully config file. Run this command in your PowerShell terminal (replace the "wt-blog" with whatever you initialized your app's title as):
+Note: this command only works in PowerShell. If you are not using PowerShell, you can manually create the file and place it in the root of your project.</p>
 <p _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">new-item scully.wt-blog.config.ts</code></p>
 <p _ngcontent-ng-c2071492969="">This command creates your Scully config file and places it at the root of your project.</p>
 <p _ngcontent-ng-c2071492969="">Add this code for the config file:</p>
@@ -205,7 +206,7 @@ export const config: ScullyConfig = {
 </code></pre>
 <h3 id="scully-module" _ngcontent-ng-c2071492969="">Scully Module</h3>
 <p _ngcontent-ng-c2071492969="">Next, we need to create the Scully module for our posts. Back in PowerShell, run this:</p>
-<p _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">ng generate @scullyio/init:markdown --project wt-blog</code></p>
+<p _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">ng generate @scullyio/init:markdown --project wt-blog</code> &lt;---- Change 'wt-blog' to your project name</p>
 <p _ngcontent-ng-c2071492969="">It will give you a couple prompts:</p>
 <p _ngcontent-ng-c2071492969="">For the name of the module input "posts"</p>
 <p _ngcontent-ng-c2071492969="">For the slug input "id"</p>
@@ -267,6 +268,7 @@ The 'npx scully' command, from above builds your application to use the routes f
 <p _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">ng g @scullyio/init:post --name="Angular and Scully"</code></p>
 <p _ngcontent-ng-c2071492969="">When it asks for the target folder, type 'posts' (without the quotes).</p>
 <p _ngcontent-ng-c2071492969="">Now you should see a brand new markdown file created in your 'posts' directory with the title "Angular and Scully". Notice the description has been defaulted in as well as the default published status of 'false'.</p>
+<p _ngcontent-ng-c2071492969="">Note: if the command doesn't work, you can simply create a new '.md' file in the source folder.</p>
 <p _ngcontent-ng-c2071492969="">At this point we can play around with creating fake content to "fill in" the post. I like to use the lorem ipsum generater for these types of tasks (<a href="https://loremipsum.io/" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://loremipsum.io/</a>).</p>
 <p _ngcontent-ng-c2071492969="">Generate your new fake content using the generater and copy-paste it to the "content" section of your posts. This is everything under the '---' in the markdown file.</p>
 <p _ngcontent-ng-c2071492969="">Remember to change 'published' to true and remove the default generated slug.</p>

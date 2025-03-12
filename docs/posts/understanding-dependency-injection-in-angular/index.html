@@ -44,10 +44,10 @@
 <p _ngcontent-ng-c2071492969="">Angular services are the backbone of DI. They encapsulate reusable logic and can be injected into components or other services.</p>
 <h4 id="creating-a-service" _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Creating a Service</strong></h4>
 <p _ngcontent-ng-c2071492969="">Use the <code _ngcontent-ng-c2071492969="">@Injectable</code> decorator to make a class available for DI.</p>
-<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Injectable } from '@angular/core';
+<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root', // Registers the service at the root level
+  providedIn: "root", // Registers the service at the root level
 })
 export class LoggerService {
   log(message: string): void {
@@ -57,18 +57,18 @@ export class LoggerService {
 </code></pre>
 <p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Using the Service</strong></p>
 <p _ngcontent-ng-c2071492969="">Inject the service into a component’s constructor:</p>
-<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Component, OnInit } from '@angular/core';
-import { LoggerService } from './logger.service';
+<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Component, OnInit } from "@angular/core";
+import { LoggerService } from "./logger.service";
 
 @Component({
-  selector: 'app-example',
+  selector: "app-example",
   template: `&lt;h1&gt;Check the console for logs&lt;/h1&gt;`,
 })
 export class ExampleComponent implements OnInit {
   constructor(private logger: LoggerService) {}
 
   ngOnInit(): void {
-    this.logger.log('ExampleComponent initialized');
+    this.logger.log("ExampleComponent initialized");
   }
 }
 </code></pre>
@@ -82,12 +82,12 @@ export class ExampleComponent implements OnInit {
 <p _ngcontent-ng-c2071492969="">A Class Provider is a type of dependency injection provider that specifies which class should be used to satisfy a dependency. It tells Angular to use a particular class (or a subclass) to create an instance of the required service or dependency.</p>
 <p _ngcontent-ng-c2071492969="">Class providers are defined in the <code _ngcontent-ng-c2071492969="">providers</code> array of an Angular module or component and use the <code _ngcontent-ng-c2071492969="">useClass</code> property.</p>
 <p _ngcontent-ng-c2071492969="">Example: <strong _ngcontent-ng-c2071492969="">Using a Class Provider</strong></p>
-<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Injectable } from '@angular/core';
+<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Injectable } from "@angular/core";
 
 @Injectable()
 export class ApiService {
   fetchData(): string {
-    return 'Data from API';
+    return "Data from API";
   }
 }
 
@@ -115,14 +115,13 @@ export class AppModule {}
 <p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Component Context</strong></p>
 <p _ngcontent-ng-c2071492969="">Services can also be scoped to a specific component using the providers array in the component decorator.</p>
 <pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">@Component({
-  selector: 'app-child',
+  selector: "app-child",
   template: `&lt;p&gt;Child Component&lt;/p&gt;`,
   providers: [LoggerService], // Scoped to this component and its descendants
 })
-
 export class ChildComponent {
   constructor(private logger: LoggerService) {
-    this.logger.log('ChildComponent has its own LoggerService instance');
+    this.logger.log("ChildComponent has its own LoggerService instance");
   }
 }
 </code></pre>
@@ -138,19 +137,19 @@ export class ChildComponent {
 <p _ngcontent-ng-c2071492969="">Each component has its own injector. Services provided in the providers array of a component are created specifically for that component and its descendants.</p>
 <p _ngcontent-ng-c2071492969="">Example:</p>
 <pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">@Component({
-  selector: 'app-parent',
+  selector: "app-parent",
   template: `&lt;app-child&gt;&lt;/app-child&gt;`,
   providers: [LoggerService],
 })
 export class ParentComponent {}
 
 @Component({
-  selector: 'app-child',
+  selector: "app-child",
   template: `&lt;p&gt;Child Component&lt;/p&gt;`,
 })
 export class ChildComponent {
   constructor(private logger: LoggerService) {
-    this.logger.log('ChildComponent logs with ParentComponent’s LoggerService');
+    this.logger.log("ChildComponent logs with ParentComponent’s LoggerService");
   }
 }
 </code></pre>
@@ -158,22 +157,22 @@ export class ChildComponent {
 <h3 id="6-overview-of-injection-tokens" _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">6. Overview of Injection Tokens</strong></h3>
 <p _ngcontent-ng-c2071492969="">When you need to inject values that aren’t classes (e.g., configuration objects or primitive values), you can use Injection Tokens.</p>
 <p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Defining an Injection Token</strong></p>
-<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { InjectionToken } from '@angular/core';
+<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { InjectionToken } from "@angular/core";
 
-export const API_URL = new InjectionToken&lt;string&gt;('API_URL');
+export const API_URL = new InjectionToken&lt;string&gt;("API_URL");
 </code></pre>
 <p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Providing the Token</strong></p>
 <pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">@NgModule({
-  providers: [{ provide: API_URL, useValue: 'https://api.example.com' }],
+  providers: [{ provide: API_URL, useValue: "https://api.example.com" }],
 })
 export class AppModule {}
 </code></pre>
 <p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Injecting the Token</strong></p>
-<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Component, Inject } from '@angular/core';
-import { API_URL } from './app.tokens';
+<pre _ngcontent-ng-c2071492969=""><code class="language-typescript" _ngcontent-ng-c2071492969="">import { Component, Inject } from "@angular/core";
+import { API_URL } from "./app.tokens";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `&lt;h1&gt;API URL: {{ apiUrl }}&lt;/h1&gt;`,
 })
 export class AppComponent {
@@ -195,7 +194,7 @@ export class AppComponent {
 <li _ngcontent-ng-c2071492969=""><a href="https://angular.dev/guide/di" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">Angular.dev Dependency Injection</a></li>
 </ul>
 <h4 id="note" _ngcontent-ng-c2071492969="">Note:</h4>
-<p _ngcontent-ng-c2071492969=""><em _ngcontent-ng-c2071492969="">This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">ChatGPT</a>.</em></p>
+<p _ngcontent-ng-c2071492969=""><em _ngcontent-ng-c2071492969="">This post used assistance from <a href="https://chatgpt.com/" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">ChatGPT</a> for general guidance, references, and content.</em></p>
 <ul _ngcontent-ng-c2071492969="">
 <li _ngcontent-ng-c2071492969=""><em _ngcontent-ng-c2071492969="">OpenAI. (2024). ChatGPT (Dec 5 version) [Large language model]. <a href="https://chat.openai.com/chat" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://chat.openai.com/chat</a>.</em></li>
 </ul>
