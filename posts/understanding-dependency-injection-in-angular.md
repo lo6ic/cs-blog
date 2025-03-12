@@ -13,6 +13,7 @@ December 5th, 2024
 Dependency Injection (DI) is a fundamental design pattern in Angular that fosters code modularity, maintainability, and testability. Angular's powerful built-in DI system simplifies the management of dependencies, allowing developers to focus on building robust and scalable applications.
 
 In this article, we’ll cover:
+
 1. An overview of Dependency Injection
 2. Creating an injectable service
 3. Defining dependency providers
@@ -30,6 +31,7 @@ Dependency Injection is a design pattern in which an object’s dependencies are
 In Angular, DI ensures that services and other dependencies are injected into components, directives, or other services automatically by Angular's injector.
 
 **Key Benefits of DI in Angular**:
+
 - **Loose Coupling**: Components and services are independent of their dependencies’ implementations.
 - **Reusability**: Dependencies can be reused across different parts of the application.
 - **Testability**: Dependencies can be mocked during testing.
@@ -45,10 +47,10 @@ Angular services are the backbone of DI. They encapsulate reusable logic and can
 Use the `@Injectable` decorator to make a class available for DI.
 
 ```typescript
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root', // Registers the service at the root level
+  providedIn: "root", // Registers the service at the root level
 })
 export class LoggerService {
   log(message: string): void {
@@ -62,18 +64,18 @@ export class LoggerService {
 Inject the service into a component’s constructor:
 
 ```typescript
-import { Component, OnInit } from '@angular/core';
-import { LoggerService } from './logger.service';
+import { Component, OnInit } from "@angular/core";
+import { LoggerService } from "./logger.service";
 
 @Component({
-  selector: 'app-example',
+  selector: "app-example",
   template: `<h1>Check the console for logs</h1>`,
 })
 export class ExampleComponent implements OnInit {
   constructor(private logger: LoggerService) {}
 
   ngOnInit(): void {
-    this.logger.log('ExampleComponent initialized');
+    this.logger.log("ExampleComponent initialized");
   }
 }
 ```
@@ -99,12 +101,12 @@ Class providers are defined in the `providers` array of an Angular module or com
 Example: **Using a Class Provider**
 
 ```typescript
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable()
 export class ApiService {
   fetchData(): string {
-    return 'Data from API';
+    return "Data from API";
   }
 }
 
@@ -145,19 +147,18 @@ Services can also be scoped to a specific component using the providers array in
 
 ```typescript
 @Component({
-  selector: 'app-child',
+  selector: "app-child",
   template: `<p>Child Component</p>`,
   providers: [LoggerService], // Scoped to this component and its descendants
 })
-
 export class ChildComponent {
   constructor(private logger: LoggerService) {
-    this.logger.log('ChildComponent has its own LoggerService instance');
+    this.logger.log("ChildComponent has its own LoggerService instance");
   }
 }
 ```
 
---- 
+---
 
 ### **5. Hierarchical Injectors**
 
@@ -173,21 +174,22 @@ Angular uses a hierarchical injector system to resolve dependencies. This system
 Each component has its own injector. Services provided in the providers array of a component are created specifically for that component and its descendants.
 
 Example:
+
 ```typescript
 @Component({
-  selector: 'app-parent',
+  selector: "app-parent",
   template: `<app-child></app-child>`,
   providers: [LoggerService],
 })
 export class ParentComponent {}
 
 @Component({
-  selector: 'app-child',
+  selector: "app-child",
   template: `<p>Child Component</p>`,
 })
 export class ChildComponent {
   constructor(private logger: LoggerService) {
-    this.logger.log('ChildComponent logs with ParentComponent’s LoggerService');
+    this.logger.log("ChildComponent logs with ParentComponent’s LoggerService");
   }
 }
 ```
@@ -201,16 +203,16 @@ When you need to inject values that aren’t classes (e.g., configuration object
 **Defining an Injection Token**
 
 ```typescript
-import { InjectionToken } from '@angular/core';
+import { InjectionToken } from "@angular/core";
 
-export const API_URL = new InjectionToken<string>('API_URL');
+export const API_URL = new InjectionToken<string>("API_URL");
 ```
 
 **Providing the Token**
 
 ```typescript
 @NgModule({
-  providers: [{ provide: API_URL, useValue: 'https://api.example.com' }],
+  providers: [{ provide: API_URL, useValue: "https://api.example.com" }],
 })
 export class AppModule {}
 ```
@@ -218,11 +220,11 @@ export class AppModule {}
 **Injecting the Token**
 
 ```typescript
-import { Component, Inject } from '@angular/core';
-import { API_URL } from './app.tokens';
+import { Component, Inject } from "@angular/core";
+import { API_URL } from "./app.tokens";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>API URL: {{ apiUrl }}</h1>`,
 })
 export class AppComponent {
@@ -250,6 +252,6 @@ Start leveraging Angular’s DI system today to write cleaner, modular, and robu
 
 #### Note:
 
-*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+_This post used assistance from <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> for general guidance, references, and content._
 
-- *OpenAI. (2024). ChatGPT (Dec 5 version) [Large language model]. https://chat.openai.com/chat.*
+- _OpenAI. (2024). ChatGPT (Dec 5 version) [Large language model]. https://chat.openai.com/chat._

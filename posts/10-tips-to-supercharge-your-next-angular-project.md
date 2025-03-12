@@ -55,11 +55,11 @@ Angular’s built-in dependency injection system makes your application more fle
 
 ```typescript
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class DataService {
   getData() {
-    return 'Hello from the service!';
+    return "Hello from the service!";
   }
 }
 ```
@@ -78,8 +78,8 @@ Angular offers two ways to handle forms: template-driven and reactive forms. For
 
 ```typescript
 this.form = this.fb.group({
-  name: ['', Validators.required],
-  email: ['', [Validators.required, Validators.email]],
+  name: ["", Validators.required],
+  email: ["", [Validators.required, Validators.email]],
 });
 ```
 
@@ -111,9 +111,7 @@ Lazy loading delays the loading of a module until it’s needed. This reduces th
 **Implementation:**
 
 ```typescript
-const routes: Routes = [
-  { path: 'feature', loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule) },
-];
+const routes: Routes = [{ path: "feature", loadChildren: () => import("./feature/feature.module").then((m) => m.FeatureModule) }];
 ```
 
 Lazy loading works seamlessly with the Angular router to optimize performance.
@@ -139,7 +137,7 @@ Angular has built-in support for unit testing through <a href="https://jasmine.g
 **Example:**
 
 ```typescript
-describe('MyService', () => {
+describe("MyService", () => {
   let service: MyService;
 
   beforeEach(() => {
@@ -147,8 +145,8 @@ describe('MyService', () => {
     service = TestBed.inject(MyService);
   });
 
-  it('should return data', () => {
-    expect(service.getData()).toBe('Hello from the service!');
+  it("should return data", () => {
+    expect(service.getData()).toBe("Hello from the service!");
   });
 });
 ```
@@ -192,11 +190,11 @@ Angular is not just a framework; it’s a powerful toolset that empowers develop
 - <a href="https://blog.angular-university.io/angular-universal/" target="_blank">Angular Universal</a>
 - <a href="https://material.angular.io/" target="_blank">Angular Material</a>
 - <a href="https://v17.angular.io/guide/rx-library" target="_blank">RxJS</a>
-- <a href="https://jasmine.github.io/" target="_blank">Jasmine</a> 
+- <a href="https://jasmine.github.io/" target="_blank">Jasmine</a>
 - <a href="https://karma-runner.github.io/latest/index.html" target="_blank">Karma</a>
 
 #### Note:
 
-*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+_This post used assistance from <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> for general guidance, references, and content._
 
-- *OpenAI. (2024). ChatGPT (Dec 10 version) [Large language model]. https://chat.openai.com/chat.*
+- _OpenAI. (2024). ChatGPT (Dec 10 version) [Large language model]. https://chat.openai.com/chat._

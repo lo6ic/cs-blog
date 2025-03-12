@@ -164,6 +164,6 @@ Whether you're binding simple strings or complex objects, the concepts remain th
 
 #### Note:
 
-*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+_This post used assistance from <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> for general guidance, references, and content._
 
-- *OpenAI. (2024). ChatGPT (Dec 7 version) [Large language model]. https://chat.openai.com/chat.*
+- _OpenAI. (2024). ChatGPT (Dec 7 version) [Large language model]. https://chat.openai.com/chat._

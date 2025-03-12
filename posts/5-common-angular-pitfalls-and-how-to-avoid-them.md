@@ -16,7 +16,7 @@ Angular is a fantastic framework for building robust web applications, but like 
 
 #### **1. Skipping Angular CLI**
 
-One of the biggest mistakes beginners make is not fully leveraging the Angular Command Line Interface (CLI). Many developers, especially those transitioning from other frameworks, may try to manually set up their project or avoid using CLI commands.  
+One of the biggest mistakes beginners make is not fully leveraging the Angular Command Line Interface (CLI). Many developers, especially those transitioning from other frameworks, may try to manually set up their project or avoid using CLI commands.
 
 Check out this <a href="https://angular.dev/cli" target="_blank">link</a> to the Official Angular CLI documentation.
 
@@ -78,9 +78,7 @@ Poor performance can frustrate users and lead to higher resource consumption.
 - Implement lazy loading to load modules only when needed:
 
 ```typescript
-const routes: Routes = [
-  { path: 'feature', loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule) },
-];
+const routes: Routes = [{ path: "feature", loadChildren: () => import("./feature/feature.module").then((m) => m.FeatureModule) }];
 ```
 
 These small adjustments can make a significant difference in performance.
@@ -103,11 +101,11 @@ Use services with the `@Injectable` decorator to share logic between components.
 
 ```typescript
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class DataService {
   getData() {
-    return 'Hello, Angular!';
+    return "Hello, Angular!";
   }
 }
 ```
@@ -132,8 +130,8 @@ For complex forms, use reactive forms. They provide better control, scalability,
 
 ```typescript
 this.form = this.fb.group({
-  name: ['', Validators.required],
-  email: ['', [Validators.required, Validators.email]],
+  name: ["", Validators.required],
+  email: ["", [Validators.required, Validators.email]],
 });
 ```
 
@@ -157,6 +155,6 @@ Mastering Angular takes time, but with these tips, you’ll be well on your way 
 
 #### Note:
 
-*This post was generated with the assistance of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>.*
+_This post used assistance from <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> for general guidance, references, and content._
 
-- *OpenAI. (2025). ChatGPT (Jan 11 version) [Large language model]. https://chat.openai.com/chat.*
+- _OpenAI. (2025). ChatGPT (Jan 11 version) [Large language model]. https://chat.openai.com/chat._
