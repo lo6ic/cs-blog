@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en" id="oHTML" data-theme="light" data-critters-container=""><head><meta name="generator" content="Scully 0.0.0">
+  <meta charset="utf-8">
+  <title>A Beginner's Guide To Java Script Es6+ Features</title>
+  <base href="https://christopherschedler.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}:root{background-color:var(--fallback-b1,oklch(var(--b1)/1));color:var(--fallback-bc,oklch(var(--bc)/1))}@supports not (color: oklch(0% 0 0)){:root{color-scheme:light;--fallback-p:#491eff;--fallback-pc:#d4dbff;--fallback-s:#ff41c7;--fallback-sc:#fff9fc;--fallback-a:#00cfbd;--fallback-ac:#00100d;--fallback-n:#2b3440;--fallback-nc:#d7dde4;--fallback-b1:#ffffff;--fallback-b2:#e5e6e6;--fallback-b3:#e5e6e6;--fallback-bc:#1f2937;--fallback-in:#00b3f0;--fallback-inc:#000000;--fallback-su:#00ca92;--fallback-suc:#000000;--fallback-wa:#ffc22d;--fallback-wac:#000000;--fallback-er:#ff6f70;--fallback-erc:#000000}@media (prefers-color-scheme: dark){:root{color-scheme:dark;--fallback-p:#7582ff;--fallback-pc:#050617;--fallback-s:#ff71cf;--fallback-sc:#190211;--fallback-a:#00c7b5;--fallback-ac:#000e0c;--fallback-n:#2a323c;--fallback-nc:#a6adbb;--fallback-b1:#1d232a;--fallback-b2:#191e24;--fallback-b3:#15191e;--fallback-bc:#a6adbb;--fallback-in:#00b3f0;--fallback-inc:#000000;--fallback-su:#00ca92;--fallback-suc:#000000;--fallback-wa:#ffc22d;--fallback-wac:#000000;--fallback-er:#ff6f70;--fallback-erc:#000000}}}html{-webkit-tap-highlight-color:transparent}*{scrollbar-color:color-mix(in oklch,currentColor 35%,transparent) transparent}*:hover{scrollbar-color:color-mix(in oklch,currentColor 60%,transparent) transparent}:root{color-scheme:dark;--in:72.06% .191 231.6;--su:64.8% .15 160;--wa:84.71% .199 83.87;--er:71.76% .221 22.18;--pc:13.138% .0392 275.75;--sc:14.96% .052 342.55;--ac:14.902% .0334 183.61;--inc:0% 0 0;--suc:0% 0 0;--wac:0% 0 0;--erc:0% 0 0;--rounded-box:1rem;--rounded-btn:.5rem;--rounded-badge:1.9rem;--animation-btn:.25s;--animation-input:.2s;--btn-focus-scale:.95;--border-btn:1px;--tab-border:1px;--tab-radius:.5rem;--p:65.69% .196 275.75;--s:74.8% .26 342.55;--a:74.51% .167 183.61;--n:31.3815% .021108 254.139175;--nc:74.6477% .0216 264.435964;--b1:25.3267% .015896 252.417568;--b2:23.2607% .013807 253.100675;--b3:21.1484% .01165 254.087939;--bc:74.6477% .0216 264.435964}*,:before,:after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }</style><link rel="stylesheet" href="styles.5d2ee935972b678c.css" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.5d2ee935972b678c.css"></noscript><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KCVDBWMDT5"></script><style>.container[_ngcontent-ng-c323448750]{padding-top:10px;padding-bottom:100px;font-size:18px}#photo-top[_ngcontent-ng-c323448750]{min-height:250px;background-position:center;background-repeat:no-repeat;background-size:cover}</style><style>.btn-ghost.btn-active[_ngcontent-ng-c1992990550], .btn-ghost[_ngcontent-ng-c1992990550]:hover{--tw-border-opacity: 0;--tw-bg-opacity: .2;background-color:#00d7c0!important;color:#1d232a}</style><style>footer[_ngcontent-ng-c2629257868]{background-color:transparent}</style><style>
+      :host {
+        display: none;
+      }
+      scully-content {
+        display: none;
+      }
+    </style><script>window['ScullyIO']='generated';</script></head>
+
+<body scully-version="0.0.0">
+  <app-root _nghost-ng-c323448750="" ng-version="16.2.12"><app-header _ngcontent-ng-c323448750="" _nghost-ng-c1992990550=""><div _ngcontent-ng-c1992990550="" class="navbar bg-base-100 text-lg sticky top-0" style="padding-top: 25px; padding-bottom: 25px;"><div _ngcontent-ng-c1992990550="" class="navbar-start lg:hidden"><div _ngcontent-ng-c1992990550="" class="dropdown"><div _ngcontent-ng-c1992990550="" tabindex="0" role="button" class="btn btn-ghost lg:hidden"><svg _ngcontent-ng-c1992990550="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5"><path _ngcontent-ng-c1992990550="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg></div><ul _ngcontent-ng-c1992990550="" tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/about" class="btn btn-ghost text-xl" href="/about/">About</a></li><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/blog" class="btn btn-ghost text-xl" href="/blog/">Blog</a></li><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/resume" class="btn btn-ghost text-xl" href="/resume/">Resume</a></li><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/contact" class="btn btn-ghost text-xl" href="/contact/">Contact</a></li></ul></div></div><div _ngcontent-ng-c1992990550="" class="navbar-start hidden lg:flex"><ul _ngcontent-ng-c1992990550="" class="menu menu-horizontal px-1" style="margin-left: 100px;"><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/about" class="btn btn-ghost text-xl" href="/about/">About</a></li><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/blog" class="btn btn-ghost text-xl" href="/blog/">Blog</a></li><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/resume" class="btn btn-ghost text-xl" href="/resume/">Resume</a></li><li _ngcontent-ng-c1992990550=""><a _ngcontent-ng-c1992990550="" routerlink="/contact" class="btn btn-ghost text-xl" href="/contact/">Contact</a></li></ul></div><div _ngcontent-ng-c1992990550="" class="navbar-center hidden lg:flex"><div _ngcontent-ng-c1992990550="" class="avatar"><div _ngcontent-ng-c1992990550="" class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-4"><img _ngcontent-ng-c1992990550="" src="./assets/selfHFcircle600w.png" width="100"></div></div></div><div _ngcontent-ng-c1992990550="" class="navbar-center lg:hidden"><div _ngcontent-ng-c1992990550="" class="avatar"><div _ngcontent-ng-c1992990550="" class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-4"><img _ngcontent-ng-c1992990550="" src="./assets/selfHFcircle600w.png" width="100"></div></div></div><div _ngcontent-ng-c1992990550="" class="navbar-end"><label _ngcontent-ng-c1992990550="" class="swap swap-rotate" style="margin-right: 50px;"><input _ngcontent-ng-c1992990550="" type="checkbox" value="synthwave" class="theme-controller"><svg _ngcontent-ng-c1992990550="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="swap-off fill-current w-10 h-10"><path _ngcontent-ng-c1992990550="" d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"></path></svg><svg _ngcontent-ng-c1992990550="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="swap-on fill-current w-10 h-10"><path _ngcontent-ng-c1992990550="" d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"></path></svg></label></div></div></app-header><div _ngcontent-ng-c323448750="" id="photo-top"></div><div _ngcontent-ng-c323448750="" class="container mx-auto"><main _ngcontent-ng-c323448750="" class="min-h-screen flex flex-col justify-between"><section _ngcontent-ng-c323448750="" class="flex-grow"><article _ngcontent-ng-c323448750="" class="prose prose-xl max-w-none"><router-outlet _ngcontent-ng-c323448750=""></router-outlet><app-posts _nghost-ng-c2071492969="">
+<div _ngcontent-ng-c2071492969="" class="blog-content">
+  <!--scullyContent-begin--><h3 id="a-beginners-guide-to-javascript-es6-features" _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">A Beginner’s Guide to JavaScript ES6+ Features</strong></h3>
+<p _ngcontent-ng-c2071492969="">March 29th, 2025</p>
+<h4 id="introduction-the-evolution-of-javascript-and-es-naming-conventions" _ngcontent-ng-c2071492969="">Introduction: The Evolution of JavaScript and ES Naming Conventions</h4>
+<p _ngcontent-ng-c2071492969="">JavaScript, originally created in 1995 by Brendan Eich, has undergone significant evolution over the years. The scripting language was standardized under ECMAScript (ES), a specification maintained by ECMA International.</p>
+<p _ngcontent-ng-c2071492969="">The versions of ECMAScript are named based on their release year. Prior to ES6, versions followed a numerical sequence (ES1 to ES5). However, with the release of ES6 in 2015, the convention changed to reflect the release year (e.g., ES2015, ES2016, etc.). Despite this, developers often refer to ES6+ when discussing modern JavaScript improvements introduced since ES6.</p>
+<h4 id="es6-es2015--a-game-changer-for-javascript" _ngcontent-ng-c2071492969="">ES6 (ES2015) – A Game-Changer for JavaScript</h4>
+<p _ngcontent-ng-c2071492969="">ES6 introduced groundbreaking features that significantly improved JavaScript development. Some of the key features include:</p>
+<h5 id="1-let-and-const-block-scoped-variables" _ngcontent-ng-c2071492969="">1. <code _ngcontent-ng-c2071492969="">let</code> and <code _ngcontent-ng-c2071492969="">const</code> (Block-Scoped Variables)</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">let</code> allows variables to be block-scoped, avoiding issues with <code _ngcontent-ng-c2071492969="">var</code>.</li>
+<li _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">const</code> is used for variables that should not be reassigned.</li>
+</ul>
+<h5 id="2-arrow-functions-" _ngcontent-ng-c2071492969="">2. Arrow Functions (<code _ngcontent-ng-c2071492969="">=&gt;</code>)</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Provides a concise syntax for writing functions.</li>
+<li _ngcontent-ng-c2071492969="">Automatically binds <code _ngcontent-ng-c2071492969="">this</code> to the surrounding context.</li>
+</ul>
+<h5 id="3-template-literals" _ngcontent-ng-c2071492969="">3. Template Literals</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Allows for multi-line strings and embedded expressions using backticks (`).</li>
+</ul>
+<h5 id="4-destructuring-assignment" _ngcontent-ng-c2071492969="">4. Destructuring Assignment</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Extracts values from arrays or objects and assigns them to variables in a single statement.</li>
+</ul>
+<h5 id="5-default-parameters" _ngcontent-ng-c2071492969="">5. Default Parameters</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Allows function parameters to have default values if no argument is passed.</li>
+</ul>
+<h5 id="6-rest-and-spread-operators-" _ngcontent-ng-c2071492969="">6. Rest and Spread Operators (<code _ngcontent-ng-c2071492969="">...</code>)</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Rest (<code _ngcontent-ng-c2071492969="">...args</code>) collects function arguments into an array.</li>
+<li _ngcontent-ng-c2071492969="">Spread (<code _ngcontent-ng-c2071492969="">...array</code>) expands elements into individual arguments.</li>
+</ul>
+<h5 id="7-classes-and-class-syntax" _ngcontent-ng-c2071492969="">7. Classes and <code _ngcontent-ng-c2071492969="">class</code> Syntax</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Introduces a cleaner, object-oriented approach to JavaScript development.</li>
+</ul>
+<h5 id="8-modules-import-and-export" _ngcontent-ng-c2071492969="">8. Modules (<code _ngcontent-ng-c2071492969="">import</code> and <code _ngcontent-ng-c2071492969="">export</code>)</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Enables modular development by allowing code to be divided into separate files.</li>
+</ul>
+<h5 id="9-promises-for-asynchronous-operations" _ngcontent-ng-c2071492969="">9. Promises for Asynchronous Operations</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969="">Provides a better alternative to callbacks, improving readability.</li>
+</ul>
+<h4 id="es7-es2016--small-but-powerful-enhancements" _ngcontent-ng-c2071492969="">ES7 (ES2016) – Small but Powerful Enhancements</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Exponentiation Operator (<code _ngcontent-ng-c2071492969="">**</code>)</strong> – A shorthand for <code _ngcontent-ng-c2071492969="">Math.pow()</code>.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">Array.prototype.includes()</code></strong> – Checks if an array contains a specified element.</li>
+</ul>
+<h4 id="es8-es2017--asyncawait-revolutionizes-async-programming" _ngcontent-ng-c2071492969="">ES8 (ES2017) – Async/Await Revolutionizes Async Programming</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">async</code> and <code _ngcontent-ng-c2071492969="">await</code></strong> – Provides a cleaner way to handle asynchronous operations.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Object.entries() and Object.values()</strong> – Retrieves key-value pairs or values from an object.</li>
+</ul>
+<h4 id="es9-es2018--more-developer-friendly-additions" _ngcontent-ng-c2071492969="">ES9 (ES2018) – More Developer-Friendly Additions</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Rest/Spread Properties for Objects</strong> – Allows object destructuring with the spread operator.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Promise.prototype.finally()</strong> – Runs a function when a promise is settled, regardless of success or failure.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Asynchronous Iteration (<code _ngcontent-ng-c2071492969="">for-await-of</code>)</strong> – Enables async operations inside loops.</li>
+</ul>
+<h4 id="es10-es2019--quality-of-life-improvements" _ngcontent-ng-c2071492969="">ES10 (ES2019) – Quality-of-Life Improvements</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Optional Catch Binding</strong> – No longer requires an error parameter in <code _ngcontent-ng-c2071492969="">catch</code> blocks.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">Array.prototype.flat()</code> and <code _ngcontent-ng-c2071492969="">flatMap()</code></strong> – Flattens nested arrays.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">Object.fromEntries()</code></strong> – Converts an array of key-value pairs into an object.</li>
+</ul>
+<h4 id="es11-es2020--big-updates-for-modern-development" _ngcontent-ng-c2071492969="">ES11 (ES2020) – Big Updates for Modern Development</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Nullish Coalescing Operator (<code _ngcontent-ng-c2071492969="">??</code>)</strong> – Returns the right-hand value only if the left-hand value is <code _ngcontent-ng-c2071492969="">null</code> or <code _ngcontent-ng-c2071492969="">undefined</code>.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Optional Chaining (<code _ngcontent-ng-c2071492969="">?.</code>)</strong> – Safely accesses deeply nested properties without throwing an error.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">BigInt</strong> – Supports large integers beyond <code _ngcontent-ng-c2071492969="">Number.MAX_SAFE_INTEGER</code>.</li>
+</ul>
+<h4 id="es12-es2021--refinements-and-new-methods" _ngcontent-ng-c2071492969="">ES12 (ES2021) – Refinements and New Methods</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">String.prototype.replaceAll()</strong> – Replaces all occurrences of a substring.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Logical Assignment Operators (<code _ngcontent-ng-c2071492969="">&amp;&amp;=</code>, <code _ngcontent-ng-c2071492969="">||=</code>, <code _ngcontent-ng-c2071492969="">??=</code>)</strong> – Combines logical operations with assignment.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Numeric Separators (<code _ngcontent-ng-c2071492969="">_</code>)</strong> – Improves readability of large numbers.</li>
+</ul>
+<h4 id="es13-es2022--more-utility-enhancements" _ngcontent-ng-c2071492969="">ES13 (ES2022) – More Utility Enhancements</h4>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Top-Level <code _ngcontent-ng-c2071492969="">await</code></strong> – Allows <code _ngcontent-ng-c2071492969="">await</code> at the top level of modules.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">Object.hasOwn()</code></strong> – A more reliable alternative to <code _ngcontent-ng-c2071492969="">hasOwnProperty()</code>.</li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Class Fields and Private Methods (<code _ngcontent-ng-c2071492969="">#</code>)</strong> – Enables true private properties in classes.</li>
+</ul>
+<h4 id="es14-es2023--array-enhancements" _ngcontent-ng-c2071492969="">ES14 (ES2023) – Array Enhancements</h4>
+<p _ngcontent-ng-c2071492969="">Array.prototype and TypedArray.prototype additions:</p>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">toSorted</code></strong></li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">toReversed</code></strong></li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">with</code></strong></li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">findLast</code></strong></li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">findLastIndex</code></strong></li>
+<li _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969=""><code _ngcontent-ng-c2071492969="">toSpliced</code></strong></li>
+<li _ngcontent-ng-c2071492969="">Added support for #! shebang comments at the beginning of files to better facilitate executable ECMAScript files; and allowed the use of most Symbols as keys in weak collections.</li>
+</ul>
+<h4 id="conclusion" _ngcontent-ng-c2071492969="">Conclusion</h4>
+<p _ngcontent-ng-c2071492969="">The evolution of JavaScript with ES6+ has brought significant improvements in syntax, readability, and efficiency. From arrow functions to async/await and optional chaining, these features help developers write cleaner and more maintainable code. As JavaScript continues to evolve, staying up to date with new ECMAScript features will enhance your development skills and improve your ability to build modern web applications.</p>
+<h5 id="resources" _ngcontent-ng-c2071492969="">Resources</h5>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><a href="https://www.w3schools.com/js/js_versions.asp" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">JavaScript Versions (W3 Schools)</a></li>
+<li _ngcontent-ng-c2071492969=""><a href="https://en.wikipedia.org/wiki/ECMAScript_version_history" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">ECMAScript Version History (wikipedia)</a></li>
+<li _ngcontent-ng-c2071492969=""><a href="https://www.geeksforgeeks.org/introduction-to-es6/" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">Introduction to ES6</a></li>
+</ul>
+<h5 id="note" _ngcontent-ng-c2071492969="">Note:</h5>
+<p _ngcontent-ng-c2071492969=""><em _ngcontent-ng-c2071492969="">This post used assistance from <a href="https://chatgpt.com/" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">ChatGPT</a> for general guidance, references, and content.</em></p>
+<ul _ngcontent-ng-c2071492969="">
+<li _ngcontent-ng-c2071492969=""><em _ngcontent-ng-c2071492969="">OpenAI. (2025). ChatGPT (Mar 27 version) [Large language model]. <a href="https://chat.openai.com/chat" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://chat.openai.com/chat</a>.</em></li>
+</ul>
+<!--scullyContent-end--><scully-content _ngcontent-ng-c2071492969=""></scully-content>
+<script>try {window['scullyContent'] = {cssId:"_ngcontent-ng-c2071492969",html:document.body.innerHTML.split('<!--scullyContent-begin-->')[1].split('<!--scullyContent-end-->')[0]};} catch(e) {console.error('scully could not parse content');}</script></div></app-posts><!----></article></section><app-footer _ngcontent-ng-c323448750="" _nghost-ng-c2629257868=""><footer _ngcontent-ng-c2629257868="" class="footer footer-center bg-base-300 text-base-content p-4"><aside _ngcontent-ng-c2629257868=""><p _ngcontent-ng-c2629257868="">Copyright @2025 ChristopherSchedler.com. All Rights Reserved.</p></aside></footer></app-footer></main></div></app-root>
+<script id="ScullyIO-transfer-state"></script><script src="runtime.8a414d1598031b79.js" type="module"></script><script src="polyfills.96a0d1b27748a9c6.js" type="module"></script><script src="main.bac045824db374f1.js" type="module"></script>
+
+</body></html>
