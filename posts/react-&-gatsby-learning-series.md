@@ -34,7 +34,7 @@ The series is divided into **five parts + bonus content**:
 
 1. **Foundation Series – React Fundamentals**
 
-    - Mental model shift: Angular → React
+    - <a href="https://www.christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift" target="_blank">From Angular to React: Understanding the Mental Model Shift</a> 
 
     - Components, props, and events
 
