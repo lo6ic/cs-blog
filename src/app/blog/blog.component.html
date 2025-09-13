@@ -1,3 +1,13 @@
+<div class="blog-search">
+  <input
+    type="search"
+    placeholder="Search posts..."
+    [value]="(currentSearch$ | async) ?? ''"
+    (input)="onSearch($any($event.target).value)"
+    aria-label="Search blog posts"
+  />
+</div>
+
 <div *ngFor="let item of pagedPosts$ | async">
   <article *ngIf="item['datePublished']">
     <h3><a [routerLink]="item.route">{{item.title}}</a></h3>

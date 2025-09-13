@@ -19,6 +19,11 @@ export class BlogComponent implements OnInit {
   pagedPosts$!: Observable<ScullyRoute[]>;
   totalPages$!: Observable<number>;
 
+  // Search state
+  private search$ = new BehaviorSubject<string>('');
+  currentSearch$ = this.search$.asObservable();
+  private filteredPosts$!: Observable<ScullyRoute[]>;
+
   constructor(
     private scullyService: ScullyRoutesService,
     private route: ActivatedRoute,
@@ -40,13 +45,26 @@ export class BlogComponent implements OnInit {
       })
     );
 
-    // Derive total pages
-    this.totalPages$ = this.posts$.pipe(
+    // Filter posts by search term (title + description)
+    this.filteredPosts$ = combineLatest([this.posts$, this.search$]).pipe(
+      map(([posts, term]) => {
+        const q = term?.toLowerCase().trim();
+        if (!q) return posts;
+        return posts.filter((p) => {
+          const title = (p.title || '').toString().toLowerCase();
+          const desc = (p['description'] || '').toString().toLowerCase();
+          return title.includes(q) || desc.includes(q);
+        });
+      })
+    );
+
+    // Derive total pages from filtered posts
+    this.totalPages$ = this.filteredPosts$.pipe(
       map((posts) => Math.max(1, Math.ceil(posts.length / this.pageSize)))
     );
 
-    // Derive paged posts
-    this.pagedPosts$ = combineLatest([this.posts$, this.page$]).pipe(
+    // Derive paged posts from filtered list
+    this.pagedPosts$ = combineLatest([this.filteredPosts$, this.page$]).pipe(
       map(([posts, page]) => {
         const start = (page - 1) * this.pageSize;
         return posts.slice(start, start + this.pageSize);
@@ -59,6 +77,10 @@ export class BlogComponent implements OnInit {
     if (!Number.isNaN(initialPage) && initialPage >= 1) {
       this.page$.next(initialPage);
     }
+    const initialQuery = qp.get('q') ?? '';
+    if (initialQuery) {
+      this.search$.next(initialQuery);
+    }
   }
 
   // Pagination controls
@@ -68,6 +90,18 @@ export class BlogComponent implements OnInit {
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: { page: next },
+      queryParamsHandling: 'merge',
+    });
+  }
+
+  // Search
+  onSearch(term: string) {
+    this.search$.next(term);
+    // Reset to first page on new search
+    this.page$.next(1);
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { q: term || null, page: 1 },
       queryParamsHandling: 'merge',
     });
   }

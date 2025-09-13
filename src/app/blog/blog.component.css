@@ -2,6 +2,22 @@ article{
   border-bottom:1px solid grey;
 }
 
+/* Search bar */
+.blog-search {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.75rem 0 1rem;
+}
+
+.blog-search input[type="search"] {
+  width: 25%;
+  padding-left: 5px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+}
+
 /* Pagination styles */
 .pagination {
   display: flex;
@@ -30,6 +46,10 @@ article{
 
 .pagination .nav-btn {
   font-weight: 600;
+}
+
+.pagination .nav-btn[disabled] {
+  cursor:default;
 }
 
 .pagination .page-btn[disabled] {
