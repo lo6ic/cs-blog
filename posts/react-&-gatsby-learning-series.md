@@ -36,7 +36,7 @@ The series is divided into **five parts + bonus content**:
 
     - <a href="https://www.christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift" target="_blank">From Angular to React: Understanding the Mental Model Shift</a> 
 
-    - Components, props, and events
+    - <a href="https://christopherschedler.com/posts/react-fundamentals:-components,-props,-and-your-first-app">React Fundamentals: Components, props, and your first app</a>
 
     - State and side effects with hooks
 

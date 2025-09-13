@@ -8,6 +8,8 @@ picture: "assets/posts/backshift.jpg"
 
 ### From Angular to React: Understanding the Mental Model Shift
 
+September 10th, 2025
+
 #### Intro
 
 Welcome to **Part 1 of the React & Gatsby Learning Series**!
@@ -130,6 +132,6 @@ Key takeaways from this post:
 
 - Hooks like `useEffect` replace Angular’s lifecycle hooks.
 
-In the next part, we’ll cover **React Fundamentals: Components, Props, and Your First App**—you’ll learn the basics of props, event handling, and conditional rendering by building a simple Todo app.
+In the next part, we’ll cover <a href="https://christopherschedler.com/posts/react-fundamentals:-components,-props,-and-your-first-app">**React Fundamentals: Components, Props, and Your First App**</a>—you’ll learn the basics of props, event handling, and conditional rendering by building a simple Todo app.
 
 👉 If you found this helpful, follow along with the series, share with fellow Angular devs making the transition, and keep an eye out for upcoming posts.
