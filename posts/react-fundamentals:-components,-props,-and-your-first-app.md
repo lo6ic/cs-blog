@@ -1,42 +1,44 @@
 ---
-title: 'React Fundamentals: Components, Props, and Your First App'
+title: "React Fundamentals: Components, Props, and Your First App"
 description: "This post introduces the core React building blocks—components, props, and events—while walking you through setting up a local React project in VS Code and creating your first interactive Todo app."
 published: true
 datePublished: September 12, 2025
 picture: "assets/posts/buildingblocks.jpg"
 ---
 
-### React Fundamentals: Components, Props, and Your First App  
+### React Fundamentals: Components, Props, and Your First App
 
 September 12th, 2025
 
-#### Intro  
+#### Intro
 
 Welcome to **Part 2 of the React & Gatsby Learning Series**!  
-In this series, I’m helping Angular developers (and front-end devs in general) understand React and Gatsby step by step. Each post builds on the last, includes a practical project, and highlights key comparisons between Angular and React (and later, Scully and Gatsby).  
+In this series, I’m helping Angular developers (and front-end devs in general) understand React and Gatsby step by step. Each post builds on the last, includes a practical project, and highlights key comparisons between Angular and React (and later, Scully and Gatsby).
 
-If you missed the first post, check out <a href="https://christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift">Part 1: From Angular to React—Understanding the Mental Model Shift</a> to get grounded in the big-picture differences between Angular and React.  
+If you missed the first post, check out <a href="https://christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift">Part 1: From Angular to React—Understanding the Mental Model Shift</a> to get grounded in the big-picture differences between Angular and React.
 
 ---
 
-#### Setting Up Your Local Development Environment  
+#### Setting Up Your Local Development Environment
 
-Before we dive into components, let’s set up React locally so you can code along.  
+Before we dive into components, let’s set up React locally so you can code along.
 
-1. **Install VS Code**  
-   - Download from <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a>.  
-   - Recommended extensions: *ES7+ React/Redux/React-Native snippets*, *Prettier*, and *React Developer Tools (browser)*.  
+1. **Install VS Code**
 
-2. **Install Node.js & npm**  
-   - Get the latest LTS version from <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>.  
-   - Confirm installation:  
+   - Download from <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a>.
+   - Recommended extensions: _ES7+ React/Redux/React-Native snippets_, _Prettier_, and _React Developer Tools (browser)_.
+
+2. **Install Node.js & npm**
+
+   - Get the latest LTS version from <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>.
+   - Confirm installation:
      ```bash
      node -v
      npm -v
-     ```  
+     ```
 
 3. **Create a New React App**  
-   React no longer recommends `create-react-app` as the default starter, so we’ll use **Vite** (fast, lightweight, and modern).  
+   React no longer recommends `create-react-app` as the default starter, so we’ll use **Vite** (fast, lightweight, and modern).
 
    ```bash
    npm create vite@latest my-first-react-app
@@ -44,6 +46,7 @@ Before we dive into components, let’s set up React locally so you can code alo
    npm install
    npm run dev
    ```
+
    - Open <a href="http://localhost:5173" target="_blank">http://localhost:5173</a> in your browser.
 
    - You now have a live React development environment running locally.
@@ -54,9 +57,9 @@ Before we dive into components, let’s set up React locally so you can code alo
 
 React is built on **components**—small, reusable building blocks of UI.
 
-   - **Functional Components (modern approach)**: Functions that return JSX.
+- **Functional Components (modern approach)**: Functions that return JSX.
 
-   - **Class Components (legacy)**: Older syntax, less common in modern codebases.
+- **Class Components (legacy)**: Older syntax, less common in modern codebases.
 
 Example – A Simple Greeting Component:
 
@@ -70,11 +73,11 @@ export default Greeting;
 
 Add `<Greeting />` into your `App.jsx` file to render it.
 
---- 
+---
 
 #### Props: Passing Data Into Components
 
-Props (short for *properties*) are like inputs to your components. They make components reusable and dynamic.
+Props (short for _properties_) are like inputs to your components. They make components reusable and dynamic.
 
 Example – Passing Props:
 
@@ -88,9 +91,9 @@ function Greeting({ name }) {
 <Greeting name="Alex" />
 ```
 
-   - In Angular, this is similar to using `@Input()` in a child component.
+- In Angular, this is similar to using `@Input()` in a child component.
 
-   - In React, props are immutable—components shouldn’t modify them.
+- In React, props are immutable—components shouldn’t modify them.
 
 ---
 
@@ -104,11 +107,7 @@ React handles events using camelCase syntax and function references.
 function Counter() {
   const [count, setCount] = React.useState(0);
 
-  return (
-    <button onClick={() => setCount(count + 1)}>
-      Count: {count}
-    </button>
-  );
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
 }
 ```
 
@@ -140,12 +139,7 @@ function TodoList() {
   return (
     <div>
       <h2>My Todo List</h2>
-      <input
-        type="text"
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-        placeholder="Enter a task"
-      />
+      <input type="text" value={task} onChange={(e) => setTask(e.target.value)} placeholder="Enter a task" />
       <button onClick={addTodo}>Add</button>
 
       <ul>
@@ -180,7 +174,6 @@ Add `<TodoList />` inside your `App.jsx` and you’ve got your first interactive
 
 - You built your first **Todo List app** using components, props, and events.
 
-In the next part, we’ll cover **React State and useEffect**, exploring how to manage local state and handle side effects like fetching or persisting data.
+In the next part, we’ll cover [React State and useEffect](https://christopherschedler.com/posts/react-state-and-side-effects-with-hooks), exploring how to manage local state and handle side effects like fetching or persisting data.
 
 👉 If you found this helpful, follow the series, share with fellow Angular devs, and keep experimenting with your Todo app!
-

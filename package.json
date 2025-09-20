@@ -13,7 +13,8 @@
     "test": "ng test",
     "scully": "npx scully --project cs-blog",
     "scully:serve": "npx scully serve --project cs-blog",
-    "scully:clean": "find ./docs -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +"
+    "scully:clean": "find ./docs -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +",
+    "scully:all": "npm run build && npm run scully && npm run scully:serve"
   },
   "private": true,
   "dependencies": {

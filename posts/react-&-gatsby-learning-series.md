@@ -34,57 +34,57 @@ The series is divided into **five parts + bonus content**:
 
 1. **Foundation Series – React Fundamentals**
 
-    - <a href="https://www.christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift" target="_blank">From Angular to React: Understanding the Mental Model Shift</a> 
+   - <a href="https://www.christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift" target="_blank">From Angular to React: Understanding the Mental Model Shift</a>
 
-    - <a href="https://christopherschedler.com/posts/react-fundamentals:-components,-props,-and-your-first-app">React Fundamentals: Components, props, and your first app</a>
+   - <a href="https://christopherschedler.com/posts/react-fundamentals:-components,-props,-and-your-first-app" target="_blank">React Fundamentals: Components, props, and your first app</a>
 
-    - State and side effects with hooks
+   - <a href="https://christopherschedler.com/posts/react-state-and-side-effects-with-hooks" target="_blank">React state and side effects with hooks</a>
 
-    - Context and advanced state management
+   - Context and advanced state management
 
-    - React Router and navigation
+   - React Router and navigation
 
 2. **Advanced React Concepts**
 
-    - Performance optimization (memoization, lazy loading)
+   - Performance optimization (memoization, lazy loading)
 
-    - Custom hooks and reusable logic
+   - Custom hooks and reusable logic
 
-    - Forms and complex data handling
+   - Forms and complex data handling
 
 3. **Introduction to Gatsby**
 
-    - What Gatsby is and when to use it
+   - What Gatsby is and when to use it
 
-    - Setting up your first Gatsby site
+   - Setting up your first Gatsby site
 
-    - GraphQL data layer deep dive
+   - GraphQL data layer deep dive
 
 4. **Building with Gatsby**
 
-    - Pages, layouts, and SEO
+   - Pages, layouts, and SEO
 
-    - Markdown/MDX content
+   - Markdown/MDX content
 
-    - Image and asset optimization
+   - Image and asset optimization
 
-    - Styling strategies (Tailwind, styled-components, etc.)
+   - Styling strategies (Tailwind, styled-components, etc.)
 
 5. **Advanced Gatsby Features**
 
-    - Client-side dynamic features
+   - Client-side dynamic features
 
-    - Plugins and customization
+   - Plugins and customization
 
-    - SEO, analytics, and performance
+   - SEO, analytics, and performance
 
-    - Deployment to Netlify/Vercel
+   - Deployment to Netlify/Vercel
 
 6. **Bonus Content**
 
-    - Migrating from Angular’s Scully to Gatsby
+   - Migrating from Angular’s Scully to Gatsby
 
-    - Advanced Gatsby architecture and scaling patterns
+   - Advanced Gatsby architecture and scaling patterns
 
 #### Who Should Follow This Series?
 
