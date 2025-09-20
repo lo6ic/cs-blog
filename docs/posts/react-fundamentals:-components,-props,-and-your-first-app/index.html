@@ -19,28 +19,28 @@
   <!--scullyContent-begin--><h3 id="react-fundamentals-components-props-and-your-first-app" _ngcontent-ng-c2071492969="">React Fundamentals: Components, Props, and Your First App</h3>
 <p _ngcontent-ng-c2071492969="">September 12th, 2025</p>
 <h4 id="intro" _ngcontent-ng-c2071492969="">Intro</h4>
-<p _ngcontent-ng-c2071492969="">Welcome to <strong _ngcontent-ng-c2071492969="">Part 2 of the React &amp; Gatsby Learning Series</strong>!<br _ngcontent-ng-c2071492969="">In this series, I’m helping Angular developers (and front-end devs in general) understand React and Gatsby step by step. Each post builds on the last, includes a practical project, and highlights key comparisons between Angular and React (and later, Scully and Gatsby).  </p>
-<p _ngcontent-ng-c2071492969="">If you missed the first post, check out <a href="https://christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">Part 1: From Angular to React—Understanding the Mental Model Shift</a> to get grounded in the big-picture differences between Angular and React.  </p>
+<p _ngcontent-ng-c2071492969="">Welcome to <strong _ngcontent-ng-c2071492969="">Part 2 of the React &amp; Gatsby Learning Series</strong>!<br _ngcontent-ng-c2071492969="">In this series, I’m helping Angular developers (and front-end devs in general) understand React and Gatsby step by step. Each post builds on the last, includes a practical project, and highlights key comparisons between Angular and React (and later, Scully and Gatsby).</p>
+<p _ngcontent-ng-c2071492969="">If you missed the first post, check out <a href="https://christopherschedler.com/posts/from-angular-to-react:-understanding-the-mental-model-shift" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">Part 1: From Angular to React—Understanding the Mental Model Shift</a> to get grounded in the big-picture differences between Angular and React.</p>
 <hr _ngcontent-ng-c2071492969="">
 <h4 id="setting-up-your-local-development-environment" _ngcontent-ng-c2071492969="">Setting Up Your Local Development Environment</h4>
-<p _ngcontent-ng-c2071492969="">Before we dive into components, let’s set up React locally so you can code along.  </p>
+<p _ngcontent-ng-c2071492969="">Before we dive into components, let’s set up React locally so you can code along.</p>
 <ol _ngcontent-ng-c2071492969="">
-<li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Install VS Code</strong>  </p>
+<li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Install VS Code</strong></p>
 <ul _ngcontent-ng-c2071492969="">
-<li _ngcontent-ng-c2071492969="">Download from <a href="https://code.visualstudio.com" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://code.visualstudio.com</a>.  </li>
+<li _ngcontent-ng-c2071492969="">Download from <a href="https://code.visualstudio.com" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://code.visualstudio.com</a>.</li>
 <li _ngcontent-ng-c2071492969="">Recommended extensions: <em _ngcontent-ng-c2071492969="">ES7+ React/Redux/React-Native snippets</em>, <em _ngcontent-ng-c2071492969="">Prettier</em>, and <em _ngcontent-ng-c2071492969="">React Developer Tools (browser)</em>.</li>
 </ul>
 </li>
-<li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Install Node.js &amp; npm</strong>  </p>
+<li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Install Node.js &amp; npm</strong></p>
 <ul _ngcontent-ng-c2071492969="">
-<li _ngcontent-ng-c2071492969="">Get the latest LTS version from <a href="https://nodejs.org" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://nodejs.org</a>.  </li>
-<li _ngcontent-ng-c2071492969="">Confirm installation:  <pre _ngcontent-ng-c2071492969=""><code class="language-bash" _ngcontent-ng-c2071492969="">node -v
+<li _ngcontent-ng-c2071492969="">Get the latest LTS version from <a href="https://nodejs.org" target="_blank" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">https://nodejs.org</a>.</li>
+<li _ngcontent-ng-c2071492969="">Confirm installation:<pre _ngcontent-ng-c2071492969=""><code class="language-bash" _ngcontent-ng-c2071492969="">node -v
 npm -v
 </code></pre>
 </li>
 </ul>
 </li>
-<li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Create a New React App</strong><br _ngcontent-ng-c2071492969="">React no longer recommends <code _ngcontent-ng-c2071492969="">create-react-app</code> as the default starter, so we’ll use <strong _ngcontent-ng-c2071492969="">Vite</strong> (fast, lightweight, and modern).  </p>
+<li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969=""><strong _ngcontent-ng-c2071492969="">Create a New React App</strong><br _ngcontent-ng-c2071492969="">React no longer recommends <code _ngcontent-ng-c2071492969="">create-react-app</code> as the default starter, so we’ll use <strong _ngcontent-ng-c2071492969="">Vite</strong> (fast, lightweight, and modern).</p>
 <pre _ngcontent-ng-c2071492969=""><code class="language-bash" _ngcontent-ng-c2071492969="">npm create vite@latest my-first-react-app
 cd my-first-react-app
 npm install
@@ -96,11 +96,7 @@ export default Greeting;
 <pre _ngcontent-ng-c2071492969=""><code class="language-jsx" _ngcontent-ng-c2071492969="">function Counter() {
   const [count, setCount] = React.useState(0);
 
-  return (
-    &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
-      Count: {count}
-    &lt;/button&gt;
-  );
+  return &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Count: {count}&lt;/button&gt;;
 }
 </code></pre>
 <ul _ngcontent-ng-c2071492969="">
@@ -128,12 +124,7 @@ function TodoList() {
   return (
     &lt;div&gt;
       &lt;h2&gt;My Todo List&lt;/h2&gt;
-      &lt;input
-        type="text"
-        value={task}
-        onChange={(e) =&gt; setTask(e.target.value)}
-        placeholder="Enter a task"
-      /&gt;
+      &lt;input type="text" value={task} onChange={(e) =&gt; setTask(e.target.value)} placeholder="Enter a task" /&gt;
       &lt;button onClick={addTodo}&gt;Add&lt;/button&gt;
 
       &lt;ul&gt;
@@ -164,10 +155,10 @@ export default TodoList;
 <li _ngcontent-ng-c2071492969=""><p _ngcontent-ng-c2071492969="">You built your first <strong _ngcontent-ng-c2071492969="">Todo List app</strong> using components, props, and events.</p>
 </li>
 </ul>
-<p _ngcontent-ng-c2071492969="">In the next part, we’ll cover <strong _ngcontent-ng-c2071492969="">React State and useEffect</strong>, exploring how to manage local state and handle side effects like fetching or persisting data.</p>
+<p _ngcontent-ng-c2071492969="">In the next part, we’ll cover <a href="https://christopherschedler.com/posts/react-state-and-side-effects-with-hooks" _ngcontent-ng-c2071492969="" rel="noreferrer noopener">React State and useEffect</a>, exploring how to manage local state and handle side effects like fetching or persisting data.</p>
 <p _ngcontent-ng-c2071492969="">👉 If you found this helpful, follow the series, share with fellow Angular devs, and keep experimenting with your Todo app!</p>
 <!--scullyContent-end--><scully-content _ngcontent-ng-c2071492969=""></scully-content>
 <script>try {window['scullyContent'] = {cssId:"_ngcontent-ng-c2071492969",html:document.body.innerHTML.split('<!--scullyContent-begin-->')[1].split('<!--scullyContent-end-->')[0]};} catch(e) {console.error('scully could not parse content');}</script></div></app-posts><!----></article></section><app-footer _ngcontent-ng-c323448750="" _nghost-ng-c2629257868=""><footer _ngcontent-ng-c2629257868="" class="footer footer-center bg-base-300 text-base-content p-4"><aside _ngcontent-ng-c2629257868=""><p _ngcontent-ng-c2629257868="">Copyright @2025 ChristopherSchedler.com. All Rights Reserved.</p></aside></footer></app-footer></main></div></app-root>
-<script id="ScullyIO-transfer-state"></script><script src="runtime.9df47de6a9409b6b.js" type="module"></script><script src="polyfills.96a0d1b27748a9c6.js" type="module"></script><script src="main.4f72c73601da9aa8.js" type="module"></script>
+<script id="ScullyIO-transfer-state"></script><script src="runtime.3bb6e4fd4f0f1ef9.js" type="module"></script><script src="polyfills.96a0d1b27748a9c6.js" type="module"></script><script src="main.4f72c73601da9aa8.js" type="module"></script>
 
 </body></html>
