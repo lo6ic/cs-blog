@@ -40,7 +40,7 @@ The series is divided into **five parts + bonus content**:
 
    - <a href="https://christopherschedler.com/posts/react-state-and-side-effects-with-hooks" target="_blank">React state and side effects with hooks</a>
 
-   - Context and advanced state management
+   - <a href="https://christopherschedler.com/posts/react-context-and-advanced-state-patterns" target="_blank">Context and advanced state management</a>
 
    - React Router and navigation
 

@@ -193,6 +193,6 @@ Now your tasks will persist even after a browser refresh.
 
 - You upgraded your Todo app to **persist tasks** with **localStorage**.
 
-In the next part, we’ll cover **React Context and Advanced State Patterns**, exploring how to handle global state without excessive prop drilling.
+In the next part, we’ll cover [React Context and Advanced State Patterns](https://christopherschedler.com/posts/react-context-and-advanced-state-patterns), exploring how to handle global state without excessive prop drilling.
 
 👉 If you found this helpful, follow the series, share with fellow Angular devs, and keep building on your Todo app!
