@@ -42,7 +42,7 @@ The series is divided into **five parts + bonus content**:
 
    - <a href="https://christopherschedler.com/posts/react-context-and-advanced-state-patterns" target="_blank">Context and advanced state management</a>
 
-   - React Router and navigation
+   - <a href="https://christopherschedler.com/posts/react-router-and-navigation" target="_blank">React Router and navigation</a>
 
 2. **Advanced React Concepts**
 

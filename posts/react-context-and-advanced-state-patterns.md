@@ -183,6 +183,6 @@ Key takeaways from this post:
 
 - You extended your Todo app with a **global theme switcher**.
 
-In the next part, we’ll cover **React Routing and Navigation Patterns**, where we’ll build multi-page apps using React Router.
+In the next part, we’ll cover [React Routing and Navigation](https://christopherschedler.com/posts/react-router-and-navigation), where we’ll build multi-page apps using React Router.
 
 👉 If you found this helpful, follow the series, share with fellow Angular devs, and start experimenting with Context in your own apps!
