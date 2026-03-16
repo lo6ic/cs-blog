@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/docs
 /tmp
 /out-tsc
 /bazel-out
@@ -43,3 +44,7 @@ Thumbs.db
 
 # Scully log file
 scully.log
+
+# Scully generated files
+.scully/settings.yml
+src/assets/scully-routes.json
