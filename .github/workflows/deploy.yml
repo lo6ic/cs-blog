@@ -40,7 +40,10 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Build production site
-        run: npm run deploy:build
+        run: |
+          npm run scully:clean
+          npm run build:prod
+          npm run scully
         env:
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.chrome.outputs.chrome-path }}
 

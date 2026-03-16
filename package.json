@@ -14,7 +14,8 @@
     "scully": "npx scully --project cs-blog",
     "scully:serve": "npx scully serve --project cs-blog",
     "scully:clean": "find ./docs -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +",
-    "scully:all": "npm run build && npm run scully && npm run scully:serve"
+    "scully:all": "npm run build && npm run scully && npm run scully:serve",
+    "deploy:build": "npm run scully:clean && npm run build:prod && npm run scully"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,9 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
+  },
+  "overrides": {
+    "node-forge": "1.3.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.10",
