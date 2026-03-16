@@ -4,6 +4,8 @@ import '@scullyio/scully-plugin-puppeteer';
 import { baseHrefRewrite } from '@scullyio/scully-plugin-base-href-rewrite';
 
 const defaultPostRenderers = ['seoHrefOptimise', baseHrefRewrite];
+const executablePath =
+  process.env['PUPPETEER_EXECUTABLE_PATH'] ?? process.env['CHROME_BIN'];
 setPluginConfig(baseHrefRewrite, { href: 'https://christopherschedler.com/' });
 
 export const config: ScullyConfig = {
@@ -11,6 +13,7 @@ export const config: ScullyConfig = {
   projectName: 'cs-blog',
   outDir: './docs',
   defaultPostRenderers,
+  puppeteerLaunchOptions: executablePath ? { executablePath } : {},
   routes: {
     '/posts/:id': {
       type: 'contentFolder',
