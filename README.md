@@ -1,14 +1,6 @@
 # Christopher Schedler Blog
 
-Personal website and blog built with Angular 16 and Scully. The site publishes static pages to GitHub Pages and serves blog content from markdown files in [`posts/`](/Users/chrisschedler/Code/cs-blog/posts).
-
-## What This Project Contains
-
-- Marketing and profile pages for `About`, `Resume`, and `Contact`
-- A blog index with search and pagination
-- Individual blog post pages generated from markdown content
-- Static site output generated into `docs/` for GitHub Pages deployment
-- Google Analytics integration through `@hakimio/ngx-google-analytics`
+Personal website and blog built with Angular 16 and Scully. Blog posts live in [`posts/`](/Users/chrisschedler/Code/cs-blog/posts), and the deployable static site is generated into [`docs/`](/Users/chrisschedler/Code/cs-blog/docs) for GitHub Pages.
 
 ## Tech Stack
 
@@ -16,8 +8,7 @@ Personal website and blog built with Angular 16 and Scully. The site publishes s
 - Scully 2
 - TypeScript
 - Tailwind CSS and DaisyUI
-- GitHub Actions for deployment
-- GitHub Pages with a custom domain
+- GitHub Pages deployed through GitHub Actions
 
 ## Project Structure
 
@@ -46,20 +37,29 @@ npm install --legacy-peer-deps
 
 ## Local Development
 
-Start the Angular development server:
+For normal app development, run:
 
 ```bash
 npm start
 ```
 
-This serves the app at `http://localhost:4200/`.
+This starts the Angular dev server at `http://localhost:4200/`.
+
+For a local preview of the generated static site, run:
+
+```bash
+npm run build:site
+npm run preview
+```
+
+Use this when you want to verify what GitHub Pages will actually serve.
 
 ## Working With Blog Posts
 
 Create a new post scaffold:
 
 ```bash
-ng g @scullyio/init:post --name="Your Post Title"
+npm run post:new -- --name="Your Post Title"
 ```
 
 Content workflow:
@@ -68,64 +68,47 @@ Content workflow:
 2. Set the front matter values you want published
 3. Change `published` to `true` when the post is ready to go live
 4. Remove or replace the default generated slug if needed
-5. Rebuild the site with Scully to regenerate the static output
+5. Run `npm run build:site` to regenerate the static output and verify the post locally
 
 ## Build Commands
 
 Build the Angular app:
 
 ```bash
-npm run build:prod
+npm run build
 ```
 
-Generate the static site with Scully:
+Build the full deployable static site:
 
 ```bash
-npm run scully
+npm run build:site
 ```
 
-Clean and rebuild the deployable output:
-
-```bash
-npm run deploy:build
-```
-
-That script runs:
-
-```bash
-npm run scully:clean
-npm run build:prod
-npm run scully
-```
+That command clears the generated `docs/` output, runs the Angular production build, and then runs Scully.
 
 Preview the generated static site locally:
 
 ```bash
-npm run scully:serve
+npm run preview
 ```
 
 ## Deployment
 
-Deployments are handled by GitHub Actions, not by committing generated `docs/` files.
+Deployments are handled by GitHub Actions. Do not commit generated `docs/` output as part of a normal change.
 
 Workflow summary:
 
 1. A push to `master` or a manual workflow dispatch starts `.github/workflows/deploy.yml`
 2. The workflow installs dependencies with `npm ci --legacy-peer-deps`
 3. It installs Chrome on the runner for Puppeteer and Scully prerendering
-4. It runs the production Angular build and Scully generation steps
+4. It runs `npm run build:site`
 5. It copies `CNAME` into `docs/CNAME`
 6. It uploads `docs/` as the GitHub Pages artifact
 7. GitHub Pages deploys the artifact
 
-Repository requirements for deploys:
+To deploy a code or content change:
 
-- GitHub Pages must be configured to deploy from `GitHub Actions`
-- The custom domain is sourced from the root `CNAME` file
-
-For a normal content or code change, the deployment flow is:
-
-1. Commit your source changes, post markdown, and any source assets
+1. Commit your source changes, markdown posts, and any source assets
 2. Push to `master`
 3. Watch the GitHub Actions run
 4. Verify the GitHub Pages deployment completed successfully
@@ -141,5 +124,5 @@ npm test
 ## Notes
 
 - `docs/` and `dist/` are generated outputs and are ignored by git
-- Scully route data is generated during builds
+- `src/assets/scully-routes.json` is regenerated during Scully builds
 - The Scully config supports CI by accepting `PUPPETEER_EXECUTABLE_PATH` or `CHROME_BIN`

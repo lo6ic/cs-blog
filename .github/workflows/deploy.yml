@@ -41,9 +41,7 @@ jobs:
 
       - name: Build production site
         run: |
-          npm run scully:clean
-          npm run build:prod
-          npm run scully
+          npm run build:site
         env:
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.chrome.outputs.chrome-path }}
 

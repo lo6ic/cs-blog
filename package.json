@@ -5,17 +5,14 @@
     "node": ">=21.5.0"
   },
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "post:new": "ng g @scullyio/init:post",
     "scully": "npx scully --project cs-blog",
-    "scully:serve": "npx scully serve --project cs-blog",
-    "scully:clean": "sh -c 'if [ -d ./docs ]; then find ./docs -mindepth 1 ! -name CNAME -exec rm -rf {} +; fi'",
-    "scully:all": "npm run build && npm run scully && npm run scully:serve",
-    "deploy:build": "npm run scully:clean && npm run build:prod && npm run scully"
+    "preview": "npx scully serve --project cs-blog",
+    "clean:site": "sh -c 'if [ -d ./docs ]; then find ./docs -mindepth 1 ! -name CNAME -exec rm -rf {} +; fi'",
+    "build:site": "npm run clean:site && npm run build && npm run scully"
   },
   "private": true,
   "dependencies": {
