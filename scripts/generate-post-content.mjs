@@ -148,3 +148,19 @@ fs.writeFileSync(OUTPUT_FILE, fileContents, "utf-8");
 console.log(
   `Generated ${publishedPosts.length} published posts -> ${OUTPUT_FILE}`,
 );
+
+// === ALSO GENERATE PRERENDER ROUTES ===
+
+const prerenderRoutes = [
+  "/blog",
+  "/contact",
+  "/about",
+  "/resume",
+  ...ids.map((id) => `/posts/${id}`),
+];
+
+const routesFilePath = path.resolve("./prerender-routes.txt");
+
+fs.writeFileSync(routesFilePath, prerenderRoutes.join("\n") + "\n", "utf-8");
+
+console.log(`Generated prerender routes -> ${routesFilePath}`);

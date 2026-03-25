@@ -10,10 +10,6 @@ const routes: Routes = [
     component: PostsComponent,
     title: PostTitleResolver,
   },
-  {
-    path: '**',
-    component: PostsComponent,
-  },
 ];
 
 @NgModule({
