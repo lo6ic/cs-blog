@@ -2,20 +2,14 @@
   "name": "cs-blog",
   "version": "0.0.0",
   "engines": {
-    "node": ">=21.5.0"
+    "node": ">=20.10.0"
   },
   "scripts": {
     "start": "ng serve",
-    "test": "ng test",
-    "post:new": "ng g @scullyio/init:post",
-    "scully": "npx scully --project cs-blog",
-    "preview": "npx scully serve --project cs-blog",
-    "clean:site": "sh -c 'if [ -d ./docs ]; then find ./docs -mindepth 1 ! -name CNAME -exec rm -rf {} +; fi'",
-    "build:site": "npm run clean:site && npm run build && npm run scully",
     "content:generate": "node ./scripts/generate-post-content.mjs",
-    "serve:ssr:cs-blog": "node dist/cs-blog/server/server.mjs",
-    "prerender:routes": "node ./scripts/generate-prerender-routes.mjs",
-    "build": "npm run content:generate && ng build"
+    "build": "npm run content:generate && ng build",
+    "preview": "npx http-server dist/cs-blog/browser",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
