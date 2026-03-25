@@ -4,11 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css'],
-  preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated,
+    selector: 'app-posts',
+    templateUrl: './posts.component.html',
+    styleUrls: ['./posts.component.css'],
+    preserveWhitespaces: true,
+    encapsulation: ViewEncapsulation.Emulated,
+    standalone: false
 })
 export class PostsComponent implements OnInit {
   route: ScullyRoute | undefined;

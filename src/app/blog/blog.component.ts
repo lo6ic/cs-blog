@@ -4,9 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable, combineLatest, map } from 'rxjs';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css'],
+    selector: 'app-blog',
+    templateUrl: './blog.component.html',
+    styleUrls: ['./blog.component.css'],
+    standalone: false
 })
 export class BlogComponent implements OnInit {
   blogSrc = '../../assets/books.jpg';
