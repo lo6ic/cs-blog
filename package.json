@@ -12,7 +12,8 @@
     "scully": "npx scully --project cs-blog",
     "preview": "npx scully serve --project cs-blog",
     "clean:site": "sh -c 'if [ -d ./docs ]; then find ./docs -mindepth 1 ! -name CNAME -exec rm -rf {} +; fi'",
-    "build:site": "npm run clean:site && npm run build && npm run scully"
+    "build:site": "npm run clean:site && npm run build && npm run scully",
+    "content:generate": "node ./scripts/generate-post-content.mjs"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,8 @@
     "@scullyio/ng-lib": "^2.1.41",
     "@scullyio/scully": "^2.1.41",
     "@scullyio/scully-plugin-puppeteer": "^2.1.41",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
