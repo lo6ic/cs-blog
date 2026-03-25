@@ -2,10 +2,10 @@
   "name": "cs-blog",
   "version": "0.0.0",
   "engines": {
-    "node": ">=20.10.0"
+    "node": ">=20 <23"
   },
   "scripts": {
-    "start": "ng serve",
+    "start": "npm run content:generate && ng serve",
     "content:generate": "node ./scripts/generate-post-content.mjs",
     "build": "npm run content:generate && ng build",
     "preview": "npx http-server dist/cs-blog/browser",
