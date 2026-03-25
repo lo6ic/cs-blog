@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  ViewEncapsulation,
+} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 import { ContentService } from '../content/content.service';
@@ -18,21 +25,25 @@ export class PostsComponent implements OnInit {
   constructor(
     private contentService: ContentService,
     private activatedRoute: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       const id = params['id'];
-      const photoTop = document.getElementById('photo-top');
 
       this.contentService.getPostById(id).subscribe((post) => {
         this.post = post;
 
-        if (photoTop) {
-          if (post?.picture) {
-            photoTop.style.backgroundImage = `url(${post.picture})`;
-          } else {
-            photoTop.style.backgroundImage = '';
+        if (isPlatformBrowser(this.platformId)) {
+          const photoTop = document.getElementById('photo-top');
+
+          if (photoTop) {
+            if (post?.picture) {
+              photoTop.style.backgroundImage = `url(${post.picture})`;
+            } else {
+              photoTop.style.backgroundImage = '';
+            }
           }
         }
       });

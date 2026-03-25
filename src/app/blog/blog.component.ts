@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable, combineLatest, map } from 'rxjs';
 
@@ -31,12 +32,15 @@ export class BlogComponent implements OnInit {
     private contentService: ContentService,
     private route: ActivatedRoute,
     private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {
-    const paraTop = document.getElementById('photo-top');
-    if (paraTop) {
-      paraTop.style.backgroundImage = 'url(' + this.blogSrc + ')';
+    if (isPlatformBrowser(this.platformId)) {
+      const paraTop = document.getElementById('photo-top');
+      if (paraTop) {
+        paraTop.style.backgroundImage = 'url(' + this.blogSrc + ')';
+      }
     }
 
     this.posts$ = this.contentService
