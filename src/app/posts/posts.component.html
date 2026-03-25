@@ -1,4 +1,9 @@
-<!-- This is where Scully will inject the static HTML -->
-<div class="blog-content">
-  <scully-content></scully-content>
+<div class="blog-content" *ngIf="post; else postNotFound">
+  <div [innerHTML]="post.html"></div>
 </div>
+
+<ng-template #postNotFound>
+  <div class="blog-content">
+    <p>Sorry, that post could not be found.</p>
+  </div>
+</ng-template>
