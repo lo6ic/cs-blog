@@ -23,7 +23,6 @@
     "@angular/platform-server": "^20.3.18",
     "@angular/router": "^20.3.18",
     "@angular/ssr": "^20.3.21",
-    "@hakimio/ngx-google-analytics": "^15.0.0",
     "express": "^5.1.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.1",
