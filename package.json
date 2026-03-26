@@ -37,6 +37,7 @@
     "flatted": "3.4.2",
     "http-proxy-middleware": "2.0.9",
     "immutable": "4.3.8",
+    "picomatch": "4.0.4",
     "@tufjs/models": {
       "minimatch": "9.0.7"
     },
