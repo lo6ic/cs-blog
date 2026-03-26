@@ -3,6 +3,7 @@
 /about
 /resume
 /posts/angular-scully-migration
+/posts/javascript-basics-weekly-review-and-explanation-checkpoint
 /posts/javascript-basics-deep-work-array-object-drills
 /posts/javascript-basics-arrays-and-objects
 /posts/javascript-basics-functions-arrow-functions-parameters-and-this-basics
