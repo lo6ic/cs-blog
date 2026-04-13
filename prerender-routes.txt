@@ -2,6 +2,7 @@
 /contact
 /about
 /resume
+/posts/javascript-basics-closures-and-lexical-scope
 /posts/angular-scully-migration
 /posts/javascript-basics-weekly-review-and-explanation-checkpoint
 /posts/javascript-basics-deep-work-array-object-drills
