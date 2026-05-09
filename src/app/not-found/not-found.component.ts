@@ -1,4 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
     selector: 'app-not-found',
@@ -8,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
   picSrc = '../../assets/404.jpg';
+
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     let paraTop = document.getElementById('photo-top');
     if (paraTop) {
       paraTop.style.backgroundImage = 'url(' + this.picSrc + ')';
