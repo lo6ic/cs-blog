@@ -14,8 +14,8 @@
 /posts/react-router-and-navigation
 /posts/react-context-and-advanced-state-patterns
 /posts/react-state-and-side-effects-with-hooks
-/posts/react-fundamentals:-components,-props,-and-your-first-app
-/posts/from-angular-to-react:-understanding-the-mental-model-shift
+/posts/react-fundamentals-components,-props,-and-your-first-app
+/posts/from-angular-to-react-understanding-the-mental-model-shift
 /posts/react-&-gatsby-learning-series
 /posts/unlock-the-power-of-async-and-await-in-java-script
 /posts/a-beginner's-guide-to-java-script-es6+-features

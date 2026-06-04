@@ -27,8 +27,14 @@ Generated output in [`dist/`](/Users/chrisschedler/Code/cs-blog/dist) is build a
 
 ## Requirements
 
-- Node.js `>=20 <23`
+- Node.js `^20.19.0`, `^22.12.0`, or `>=24.0.0`
 - npm
+
+This project uses Angular 20, whose CLI does not support odd-numbered Node.js
+releases such as Node 21. If you use `nvm`, run `nvm use` from the repository
+root to switch to the version in `.nvmrc`.
+
+Developed with 22.12.0 (use this version)
 
 ## Install
 
