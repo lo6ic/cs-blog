@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import MarkdownIt from "markdown-it";
 
 const POSTS_DIR = path.resolve("./posts");
@@ -20,6 +19,75 @@ const REQUIRED_FIELDS = [
   "datePublished",
   "picture",
 ];
+
+function parseFrontMatterValue(value) {
+  const trimmed = value.trim();
+
+  if (trimmed === "true") {
+    return true;
+  }
+  if (trimmed === "false") {
+    return false;
+  }
+
+  const quote = trimmed[0];
+  if (
+    (quote === "\"" || quote === "'") &&
+    trimmed.endsWith(quote) &&
+    trimmed.length >= 2
+  ) {
+    return trimmed.slice(1, -1);
+  }
+
+  return trimmed;
+}
+
+function parseMarkdownDocument(raw, file) {
+  const frontMatterMatch = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+
+  if (!frontMatterMatch) {
+    throw new Error(`${file}: missing front matter block`);
+  }
+
+  const data = {};
+  const lines = frontMatterMatch[1].split(/\r?\n/);
+  let arrayField = null;
+
+  for (const line of lines) {
+    if (!line.trim()) {
+      continue;
+    }
+
+    const arrayItem = line.match(/^\s+-\s+(.+)$/);
+    if (arrayItem) {
+      if (!arrayField) {
+        throw new Error(`${file}: array item found before an array field`);
+      }
+      data[arrayField].push(parseFrontMatterValue(arrayItem[1]));
+      continue;
+    }
+
+    const field = line.match(/^([A-Za-z][A-Za-z0-9_-]*):(?:\s*(.*))?$/);
+    if (!field) {
+      throw new Error(`${file}: unsupported front matter line "${line}"`);
+    }
+
+    const [, key, value = ""] = field;
+    if (!value.trim()) {
+      data[key] = [];
+      arrayField = key;
+      continue;
+    }
+
+    data[key] = parseFrontMatterValue(value);
+    arrayField = null;
+  }
+
+  return {
+    data,
+    content: raw.slice(frontMatterMatch[0].length),
+  };
+}
 
 function assertRequiredFields(data, file) {
   for (const field of REQUIRED_FIELDS) {
@@ -93,7 +161,7 @@ for (const file of files) {
 
   const fullPath = path.join(POSTS_DIR, file);
   const raw = fs.readFileSync(fullPath, "utf-8");
-  const { data, content } = matter(raw);
+  const { data, content } = parseMarkdownDocument(raw, file);
 
   assertValidPost(data, content, file, id);
 
