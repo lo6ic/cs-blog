@@ -2,6 +2,7 @@
 /contact
 /about
 /resume
+/posts/javascript-basics-async-await-fetch-error-handling
 /posts/javascript-basics-promises-and-async-flow-wrap-up
 /posts/javascript-foundations-event-loop-and-dom-events
 /posts/javascript-basics-this-prototypes-and-classes
