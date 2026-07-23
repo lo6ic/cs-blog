@@ -3,7 +3,7 @@ title: "JavaScript Basics: Deep Work Session with an Async Mini App"
 description: "A practical teaching article on building a tiny data viewer with loading, success, and error states while mapping raw API data into a UI-ready object."
 published: true
 datePublished: "July 9, 2026"
-picture: "assets/posts/two.jpg"
+picture: "assets/posts/api.jpg"
 ---
 
 ### JavaScript Basics: Deep Work Session with an Async Mini App
