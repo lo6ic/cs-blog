@@ -3,6 +3,7 @@ export interface PostFrontMatter {
   description: string;
   published: boolean;
   datePublished: string;
+  displayOrder?: number;
   picture: string;
 }
 

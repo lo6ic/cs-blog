@@ -28,6 +28,25 @@ export class BlogComponent implements OnInit {
   currentSearch$ = this.search$.asObservable();
   private filteredPosts$!: Observable<PostSummary[]>;
 
+  private comparePosts(a: PostSummary, b: PostSummary): number {
+    const dateSort =
+      new Date(b.datePublishedIso).getTime() -
+      new Date(a.datePublishedIso).getTime();
+
+    if (dateSort !== 0) {
+      return dateSort;
+    }
+
+    const displayOrderSort =
+      (b.displayOrder ?? 0) - (a.displayOrder ?? 0);
+
+    if (displayOrderSort !== 0) {
+      return displayOrderSort;
+    }
+
+    return a.sourceFile.localeCompare(b.sourceFile);
+  }
+
   constructor(
     private contentService: ContentService,
     private route: ActivatedRoute,
@@ -46,13 +65,7 @@ export class BlogComponent implements OnInit {
     this.posts$ = this.contentService
       .getPostManifest()
       .pipe(
-        map((posts) =>
-          [...posts].sort(
-            (a, b) =>
-              new Date(b.datePublishedIso).getTime() -
-              new Date(a.datePublishedIso).getTime(),
-          ),
-        ),
+        map((posts) => [...posts].sort((a, b) => this.comparePosts(a, b))),
       );
 
     this.filteredPosts$ = combineLatest([this.posts$, this.search$]).pipe(

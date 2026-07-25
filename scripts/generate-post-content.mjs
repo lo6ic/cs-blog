@@ -117,6 +117,14 @@ function assertValidPost(data, content, file, id) {
   if (typeof data.picture !== "string" || !data.picture.trim()) {
     throw new Error(`${file}: picture must be a non-empty string`);
   }
+  if ("displayOrder" in data) {
+    const displayOrder = Number(data.displayOrder);
+    if (!Number.isInteger(displayOrder) || displayOrder < 1) {
+      throw new Error(
+        `${file}: displayOrder must be a positive integer when provided`,
+      );
+    }
+  }
   if (!content.trim()) {
     throw new Error(`${file}: markdown body is empty`);
   }
@@ -137,6 +145,24 @@ function assertValidPost(data, content, file, id) {
 
 function toTsString(value) {
   return JSON.stringify(value);
+}
+
+function getDisplayOrder(post) {
+  return post.displayOrder ?? 0;
+}
+
+function comparePosts(a, b) {
+  const dateSort = b.datePublishedIso.localeCompare(a.datePublishedIso);
+  if (dateSort !== 0) {
+    return dateSort;
+  }
+
+  const displayOrderSort = getDisplayOrder(b) - getDisplayOrder(a);
+  if (displayOrderSort !== 0) {
+    return displayOrderSort;
+  }
+
+  return a.sourceFile.localeCompare(b.sourceFile);
 }
 
 const files = fs
@@ -171,6 +197,8 @@ for (const file of files) {
 
   const html = md.render(content);
   const datePublishedIso = new Date(data.datePublished).toISOString();
+  const displayOrder =
+    "displayOrder" in data ? Number(data.displayOrder) : undefined;
   const route = `/posts/${id}`;
 
   publishedPosts.push({
@@ -182,14 +210,13 @@ for (const file of files) {
     published: data.published,
     datePublished: data.datePublished,
     datePublishedIso,
+    ...(displayOrder !== undefined ? { displayOrder } : {}),
     picture: data.picture,
     html,
   });
 }
 
-publishedPosts.sort((a, b) =>
-  b.datePublishedIso.localeCompare(a.datePublishedIso),
-);
+publishedPosts.sort(comparePosts);
 
 const manifest = publishedPosts.map(({ html, ...summary }) => summary);
 const byId = Object.fromEntries(publishedPosts.map((post) => [post.id, post]));

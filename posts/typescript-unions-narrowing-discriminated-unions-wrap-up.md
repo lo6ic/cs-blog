@@ -3,6 +3,7 @@ title: "TypeScript Mastery: Unions, Narrowing, and Discriminated Unions"
 description: "A practical teaching article on using TypeScript unions, narrowing, and discriminated unions to model safer frontend request state."
 published: true
 datePublished: "July 25, 2026"
+displayOrder: 2
 picture: "assets/posts/two.jpg"
 ---
 

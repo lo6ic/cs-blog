@@ -77,6 +77,11 @@ Required front matter fields for each post:
 - `datePublished`
 - `picture`
 
+Posts can also include optional `displayOrder` front matter when more than one
+post shares the same `datePublished`. Sorting checks the date first. Only when
+two posts have the same date, the higher `displayOrder` appears first. For
+example, `displayOrder: 2` appears before `displayOrder: 1` on the same day.
+
 Post routes are derived from the markdown filename. For example, `posts/my-post.md` becomes `/posts/my-post`.
 
 ## Working With Blog Posts

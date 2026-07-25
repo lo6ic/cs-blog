@@ -3,6 +3,7 @@ title: "TypeScript Basics: Interfaces vs Type Aliases"
 description: "A practical TypeScript teaching article focused on when to use interfaces, when to use type aliases, and how to choose based on readability, object contracts, unions, and Angular-style state modeling."
 published: true
 datePublished: "July 25, 2026"
+displayOrder: 1
 picture: "assets/posts/super.jpg"
 ---
 
