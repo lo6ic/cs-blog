@@ -3,6 +3,7 @@
 /about
 /resume
 /posts/typescript-interfaces-vs-type-aliases-wrap-up
+/posts/typescript-unions-narrowing-discriminated-unions-wrap-up
 /posts/typescript-basics-core-types-arrays-tuples-readonly
 /posts/typescript-basics-mental-model-inference-strictness
 /posts/javascript-basics-fundamentals-checkpoint
