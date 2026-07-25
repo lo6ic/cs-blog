@@ -2,13 +2,13 @@
 title: "TypeScript Basics: Core Types, Arrays, Tuples, and Readonly"
 description: "A practical TypeScript teaching article focused on core types, arrays, tuple tradeoffs, readonly properties, readonly arrays, and what compile-time protection does and does not guarantee."
 published: true
-datePublished: "July 17, 2026"
+datePublished: "July 23, 2026"
 picture: "assets/posts/cords.jpg"
 ---
 
 ### TypeScript Basics: Core Types, Arrays, Tuples, and Readonly
 
-July 17, 2026
+July 23, 2026
 
 One of the most useful TypeScript skills is learning how to model data clearly.
 

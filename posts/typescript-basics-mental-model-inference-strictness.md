@@ -8,7 +8,7 @@ picture: "assets/posts/super.jpg"
 
 ### TypeScript Basics: Mental Model, Inference, and Strictness
 
-July 16, 2026
+July 14, 2026
 
 TypeScript is one of the most important tools to understand when learning Angular.
 
