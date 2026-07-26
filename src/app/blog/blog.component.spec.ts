@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { BlogComponent } from './blog.component';
+import { BlogModule } from './blog.module';
 
 describe('BlogComponent', () => {
   let component: BlogComponent;
@@ -8,7 +10,8 @@ describe('BlogComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BlogComponent]
+      imports: [BlogModule],
+      providers: [provideRouter([])]
     });
     fixture = TestBed.createComponent(BlogComponent);
     component = fixture.componentInstance;

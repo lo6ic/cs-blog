@@ -1,9 +1,9 @@
-<div class="blog-content" *ngIf="post; else postNotFound">
-  <div [innerHTML]="post.html"></div>
-</div>
-
-<ng-template #postNotFound>
+@if (post) {
+  <div class="blog-content">
+    <div [innerHTML]="post.html"></div>
+  </div>
+} @else {
   <div class="blog-content">
     <p>Sorry, that post could not be found.</p>
   </div>
-</ng-template>
+}
