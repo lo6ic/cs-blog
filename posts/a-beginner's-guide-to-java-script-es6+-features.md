@@ -4,6 +4,10 @@ description: "A quick rundown of the changes JavaScript has endured over the yea
 published: true
 datePublished: "March 29, 2025"
 picture: assets/posts/super.jpg
+tags:
+  - javascript
+  - es6
+  - syntax
 ---
 
 ### **A Beginner’s Guide to JavaScript ES6+ Features**

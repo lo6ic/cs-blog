@@ -4,6 +4,10 @@ description: "This post introduces React’s Context API and advanced state mana
 published: true
 datePublished: September 29, 2025
 picture: "assets/posts/cords.jpg"
+tags:
+  - react
+  - context
+  - state-management
 ---
 
 ### React Context and Advanced State Patterns

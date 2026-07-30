@@ -4,6 +4,10 @@ description: "An in-depth article on HTML basics and a few essential best practi
 published: true
 datePublished: March 11, 2025
 picture: "assets/posts/two.jpg"
+tags:
+  - html
+  - accessibility
+  - best-practices
 ---
 
 ### **HTML Basics and Best Practices**

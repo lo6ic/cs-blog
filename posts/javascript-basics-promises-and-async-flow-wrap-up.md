@@ -4,6 +4,10 @@ description: "A practical teaching article on Promise states, chaining, cleanup,
 published: true
 datePublished: "July 2, 2026"
 picture: "assets/posts/two.jpg"
+tags:
+  - javascript
+  - promises
+  - async
 ---
 
 ### JavaScript Basics: Deep Work Session with Promises and Async Flow

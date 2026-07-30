@@ -4,6 +4,10 @@ description: "Learn all about DOM manipulation and transformation in this articl
 published: true
 datePublished: December 8, 2024
 picture: "assets/posts/timeforchange.jpg"
+tags:
+  - angular
+  - directives
+  - pipes
 ---
 
 ### **Mastering Directives and Pipes in Angular**

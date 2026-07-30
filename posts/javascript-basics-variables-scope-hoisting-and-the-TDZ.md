@@ -4,6 +4,10 @@ description: "A practical refresher on var vs let vs const, block scope, hoistin
 published: true
 datePublished: "March 20, 2026"
 picture: "assets/posts/backshift.jpg"
+tags:
+  - javascript
+  - scope
+  - hoisting
 ---
 
 ### JavaScript Basics: Variables, Scope, Hoisting, and the Temporal Dead Zone

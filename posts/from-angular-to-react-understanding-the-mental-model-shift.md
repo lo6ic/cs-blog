@@ -4,6 +4,10 @@ description: "This post introduces the key mental model shifts Angular developer
 published: true
 datePublished: September 10, 2025
 picture: "assets/posts/backshift.jpg"
+tags:
+  - angular
+  - react
+  - mental-model
 ---
 
 ### From Angular to React: Understanding the Mental Model Shift

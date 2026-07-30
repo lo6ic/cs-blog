@@ -4,6 +4,10 @@ description: "A practical refresher on function declarations, function expressio
 published: true
 datePublished: "March 22, 2026"
 picture: "assets/posts/highlevel.jpg"
+tags:
+  - javascript
+  - functions
+  - this
 ---
 
 ### JavaScript Basics: Functions, Arrow Functions, Parameters, and This Basics

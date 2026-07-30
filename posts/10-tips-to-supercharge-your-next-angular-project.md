@@ -4,6 +4,10 @@ description: "Ten tips to remember when going at your next Angular project!"
 published: true
 datePublished: December 11, 2024
 picture: "assets/posts/super.jpg"
+tags:
+  - angular
+  - performance
+  - best-practices
 ---
 
 ### **10 Tips to Supercharge Your Next Angular Project**

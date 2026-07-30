@@ -4,6 +4,10 @@ description: "Let's discuss the Document Object Model and all the things you can
 published: true
 datePublished: "March 28, 2025"
 picture: assets/posts/spiral.jpg
+tags:
+  - javascript
+  - dom
+  - events
 ---
 
 ### **JavaScript DOM Manipulation for Beginners**

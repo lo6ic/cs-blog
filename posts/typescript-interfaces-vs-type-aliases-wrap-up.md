@@ -5,6 +5,10 @@ published: true
 datePublished: "July 25, 2026"
 displayOrder: 1
 picture: "assets/posts/super.jpg"
+tags:
+  - typescript
+  - interfaces
+  - type-aliases
 ---
 
 ### TypeScript Basics: Interfaces vs Type Aliases

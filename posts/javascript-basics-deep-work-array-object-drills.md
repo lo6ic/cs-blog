@@ -4,6 +4,10 @@ description: "A practical refresher on array and object drills through a tiny ex
 published: true
 datePublished: "March 24, 2026"
 picture: "assets/posts/two.jpg"
+tags:
+  - javascript
+  - arrays
+  - objects
 ---
 
 ### JavaScript Basics: Deep Work Session with Array and Object Drills

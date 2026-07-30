@@ -4,6 +4,10 @@ description: "In this post, we’ll explore five of the most common Angular pitf
 published: true
 datePublished: January 11, 2025
 picture: "assets/posts/error.jpg"
+tags:
+  - angular
+  - pitfalls
+  - best-practices
 ---
 
 ### **5 Common Angular Pitfalls and How to Avoid Them**

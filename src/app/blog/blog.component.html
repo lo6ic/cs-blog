@@ -1,12 +1,46 @@
-<div class="blog-search">
-  <input
-    type="search"
-    placeholder="Search posts..."
-    [value]="(currentSearch$ | async) ?? ''"
-    (input)="onSearch($any($event.target).value)"
-    aria-label="Search blog posts"
-    />
-  </div>
+<div class="blog-filters">
+  <label class="search-field">
+    <span class="search-icon" aria-hidden="true">⌕</span>
+    <input
+      type="search"
+      placeholder="Search posts..."
+      [value]="(currentSearch$ | async) ?? ''"
+      (input)="onSearch($any($event.target).value)"
+      aria-label="Search blog posts"
+      />
+  </label>
+
+  @if (availableTags$ | async; as tags) {
+    @if (currentSelectedTags$ | async; as selectedTags) {
+      <div class="tag-filter-header">
+        <span>Filter by topic</span>
+        @if (selectedTags.length > 0) {
+          <button
+            type="button"
+            class="clear-tags-btn"
+            (click)="clearTags()"
+            >
+            Clear {{ selectedTags.length }}
+          </button>
+        }
+      </div>
+
+      <div class="blog-tags" aria-label="Filter posts by tag">
+        @for (tag of tags; track tag) {
+          <button
+            type="button"
+            class="tag-btn"
+            [class.selected]="selectedTags.includes(tag)"
+            [attr.aria-pressed]="selectedTags.includes(tag)"
+            (click)="toggleTag(tag)"
+            >
+            {{ tag }}
+          </button>
+        }
+      </div>
+    }
+  }
+</div>
 
   @for (item of pagedPosts$ | async; track item) {
     <div>

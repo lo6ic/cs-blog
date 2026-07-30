@@ -4,6 +4,10 @@ description: "A practical refresher on the JavaScript event loop, microtasks, ma
 published: true
 datePublished: "June 5, 2026"
 picture: "assets/posts/react2.jpg"
+tags:
+  - javascript
+  - event-loop
+  - async
 ---
 
 ## JavaScript Foundations: DOM Events, the Event Loop, and Async Execution

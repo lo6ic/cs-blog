@@ -4,6 +4,10 @@ description: Lock in and learn the overall power of Angular UI.
 published: true
 datePublished: November 23, 2024
 picture: "assets/posts/spiral.jpg"
+tags:
+  - angular
+  - components
+  - ui
 ---
 
 ### **The Power of Angular UI Components for Modern Web Development**

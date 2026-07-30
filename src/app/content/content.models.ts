@@ -5,6 +5,7 @@ export interface PostFrontMatter {
   datePublished: string;
   displayOrder?: number;
   picture: string;
+  tags: readonly string[];
 }
 
 export interface PostSummary extends PostFrontMatter {

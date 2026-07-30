@@ -4,6 +4,10 @@ description: "This post introduces the core React building blocks—components, 
 published: true
 datePublished: September 12, 2025
 picture: "assets/posts/buildingblocks.jpg"
+tags:
+  - react
+  - components
+  - props
 ---
 
 ### React Fundamentals: Components, Props, and Your First App

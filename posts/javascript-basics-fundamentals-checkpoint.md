@@ -4,6 +4,10 @@ description: "A practical checkpoint article reviewing closures, array transform
 published: true
 datePublished: "July 10, 2026"
 picture: "assets/posts/forms.jpg"
+tags:
+  - javascript
+  - fundamentals
+  - review
 ---
 
 ### JavaScript Basics: Fundamentals Checkpoint

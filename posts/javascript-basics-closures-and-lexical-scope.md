@@ -4,6 +4,10 @@ description: "A practical, first-person walkthrough of closures and lexical scop
 published: true
 datePublished: "April 12, 2026"
 picture: "assets/posts/react2.jpg"
+tags:
+  - javascript
+  - closures
+  - scope
 ---
 
 ### Understanding Closures and Lexical Scope in JavaScript

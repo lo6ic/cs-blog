@@ -6,11 +6,8 @@ datePublished: March 25, 2026
 picture: "assets/posts/buildingblocks.jpg"
 tags:
   - angular
-  - angular-ssr
-  - prerender
   - scully
-  - static-site
-  - web-development
+  - prerender
 ---
 
 ### Migrating from Scully + Angular 16 to Angular 20 Prerender (Full Guide)

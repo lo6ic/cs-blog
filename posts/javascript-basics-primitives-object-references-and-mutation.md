@@ -4,6 +4,10 @@ description: "A practical refresher on JavaScript primitives, object references,
 published: true
 datePublished: "March 19, 2026"
 picture: "assets/posts/two.jpg"
+tags:
+  - javascript
+  - objects
+  - mutation
 ---
 
 ## JavaScript Basics: Primitives, Object References, and Mutation

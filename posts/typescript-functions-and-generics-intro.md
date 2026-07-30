@@ -4,6 +4,10 @@ description: "A practical teaching article on typed functions, generic helpers, 
 published: true
 datePublished: "July 30, 2026"
 picture: "assets/posts/backshift.jpg"
+tags:
+  - typescript
+  - functions
+  - generics
 ---
 
 ### TypeScript Mastery: Functions and Generics Intro

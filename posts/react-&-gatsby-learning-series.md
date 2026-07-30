@@ -4,6 +4,10 @@ description: "This opening post kicks off the React & Gatsby Learning Series, gu
 published: true
 datePublished: September 9, 2025
 picture: "assets/posts/react2.jpg"
+tags:
+  - react
+  - gatsby
+  - learning-series
 ---
 
 ### React & Gatsby Learning Series

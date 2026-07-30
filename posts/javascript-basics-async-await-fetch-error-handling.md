@@ -4,6 +4,10 @@ description: "A practical teaching article on readable async code, fetch validat
 published: true
 datePublished: "July 8, 2026"
 picture: "assets/posts/error.jpg"
+tags:
+  - javascript
+  - async-await
+  - fetch
 ---
 
 ### JavaScript Basics: Deep Work Session with async/await, fetch, and Error Handling

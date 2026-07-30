@@ -4,6 +4,10 @@ description: "A practical teaching article on building a tiny data viewer with l
 published: true
 datePublished: "July 9, 2026"
 picture: "assets/posts/api.jpg"
+tags:
+  - javascript
+  - async
+  - api
 ---
 
 ### JavaScript Basics: Deep Work Session with an Async Mini App

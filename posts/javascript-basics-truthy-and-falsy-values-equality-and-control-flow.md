@@ -4,6 +4,10 @@ description: "A practical refresher on truthy and falsy values, strict equality,
 published: true
 datePublished: "March 21, 2026"
 picture: "assets/posts/arrow.jpg"
+tags:
+  - javascript
+  - equality
+  - control-flow
 ---
 
 ### JavaScript Basics: Truthy and Falsy Values, Equality, and Control Flow

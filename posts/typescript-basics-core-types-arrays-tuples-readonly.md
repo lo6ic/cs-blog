@@ -4,6 +4,10 @@ description: "A practical TypeScript teaching article focused on core types, arr
 published: true
 datePublished: "July 23, 2026"
 picture: "assets/posts/cords.jpg"
+tags:
+  - typescript
+  - arrays
+  - readonly
 ---
 
 ### TypeScript Basics: Core Types, Arrays, Tuples, and Readonly

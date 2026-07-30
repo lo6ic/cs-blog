@@ -4,6 +4,10 @@ description: A tutorial which will walk you through the steps to build a blog wi
 published: true
 datePublished: July 19, 2024
 picture: "assets/posts/blog.jpg"
+tags:
+  - angular
+  - scully
+  - blog
 ---
 
 ## **Build a Simple Blog with Angular and Scully**

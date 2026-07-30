@@ -4,6 +4,10 @@ description: "A practical refresher on common array methods, object destructurin
 published: true
 datePublished: "March 23, 2026"
 picture: "assets/posts/cords.jpg"
+tags:
+  - javascript
+  - arrays
+  - objects
 ---
 
 ### JavaScript Basics: Arrays and Objects

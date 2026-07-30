@@ -4,6 +4,10 @@ description: Cascading Style Sheets and some important beginner notes!
 published: true
 datePublished: March 27, 2025
 picture: "assets/posts/arrow.jpg"
+tags:
+  - css
+  - styling
+  - web-development
 ---
 
 ### **A Beginner’s Guide to CSS**

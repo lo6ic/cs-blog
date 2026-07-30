@@ -4,6 +4,10 @@ description: "A comprehensive guide to learning Angular's Two-way data binding."
 published: true
 datePublished: December 7, 2024
 picture: "assets/posts/two.jpg"
+tags:
+  - angular
+  - forms
+  - data-binding
 ---
 
 ### **A Guide to Understanding Angular's Two-Way Binding**

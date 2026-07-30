@@ -4,6 +4,10 @@ description: "A reflective refresher on reviewing JavaScript fundamentals from t
 published: true
 datePublished: "March 25, 2026"
 picture: "assets/posts/two.jpg"
+tags:
+  - javascript
+  - fundamentals
+  - review
 ---
 
 ### JavaScript Basics: Weekly Review and Explanation Checkpoint

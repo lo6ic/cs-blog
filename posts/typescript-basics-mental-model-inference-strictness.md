@@ -4,6 +4,10 @@ description: "A practical TypeScript teaching article focused on what TypeScript
 published: true
 datePublished: "July 14, 2026"
 picture: "assets/posts/super.jpg"
+tags:
+  - typescript
+  - inference
+  - strictness
 ---
 
 ### TypeScript Basics: Mental Model, Inference, and Strictness

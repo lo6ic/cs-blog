@@ -4,6 +4,10 @@ description: Routing is one of the greatest features of Angular.  Come learn abo
 published: true
 datePublished: November 25, 2024
 picture: "assets/posts/arrow.jpg"
+tags:
+  - angular
+  - routing
+  - navigation
 ---
 
 ### **Mastering Angular Routing: Navigating Your Web Application with Ease**

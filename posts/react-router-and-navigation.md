@@ -4,6 +4,10 @@ description: "This post introduces React Router and shows how to build multi-pag
 published: true
 datePublished: October 3, 2025
 picture: "assets/posts/routemap.jpg"
+tags:
+  - react
+  - routing
+  - navigation
 ---
 
 ### React Router and Navigation

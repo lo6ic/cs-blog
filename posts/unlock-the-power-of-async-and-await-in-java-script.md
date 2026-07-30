@@ -4,6 +4,10 @@ description: "Come learn the secrets of building better API calls with Async and
 published: true
 datePublished: "March 30, 2025"
 picture: assets/posts/api.jpg
+tags:
+  - javascript
+  - async-await
+  - api
 ---
 
 ### **Unlocking the Power of Async/Await and Browser APIs in JavaScript**

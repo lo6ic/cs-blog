@@ -4,6 +4,10 @@ description: "This post explores how React’s useState and useEffect hooks mana
 published: true
 datePublished: September 19, 2025
 picture: "assets/posts/hooks.jpg"
+tags:
+  - react
+  - hooks
+  - state
 ---
 
 ### React State and Side Effects with Hooks

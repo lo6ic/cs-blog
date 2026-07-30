@@ -4,6 +4,10 @@ description: "A practical refresher on JavaScript this, prototype lookup, shared
 published: true
 datePublished: "June 4, 2026"
 picture: "assets/posts/two.jpg"
+tags:
+  - javascript
+  - prototypes
+  - classes
 ---
 
 ## JavaScript Basics: this, Prototypes, and Class Mental Models

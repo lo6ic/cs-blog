@@ -2,23 +2,107 @@ article {
   border-bottom: 1px solid grey;
 }
 
-/* Search bar */
-.blog-search {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0.75rem 0 1rem;
+.blog-filters {
+  background: #f7f7f4;
+  border: 1px solid #deded7;
+  border-radius: 8px;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0.85rem;
 }
 
-.blog-search input[type="search"] {
-  width: 100%;
-  padding-left: 5px;
-  border: 1px solid grey;
-  border-radius: 4px;
+.search-field {
+  align-items: center;
   background: #fff;
-  color: #333;
+  border: 1px solid #cfcfc8;
+  border-radius: 6px;
+  display: flex;
+  gap: 0.45rem;
+  min-height: 2.6rem;
+  padding: 0 0.75rem;
 }
 
-/* Pagination styles */
+.search-field:focus-within {
+  border-color: #4d6f7a;
+  box-shadow: 0 0 0 3px rgba(77, 111, 122, 0.16);
+}
+
+.search-icon {
+  color: #667479;
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+}
+
+.search-field input[type="search"] {
+  background: transparent;
+  border: 0;
+  color: #252525;
+  flex: 1;
+  font: inherit;
+  min-width: 0;
+  outline: 0;
+  padding: 0.6rem 0;
+}
+
+.tag-filter-header {
+  align-items: center;
+  color: #4b4b46;
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  justify-content: space-between;
+  margin: 0.85rem 0 0.55rem;
+  text-transform: uppercase;
+}
+
+.clear-tags-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #4d6f7a;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.2rem 0;
+}
+
+.clear-tags-btn:hover {
+  text-decoration: underline;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-btn {
+  appearance: none;
+  background: #fff;
+  border: 1px solid #c7c7bf;
+  border-radius: 999px;
+  color: #34342f;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+  min-height: 2rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.tag-btn:hover {
+  background: #ecece7;
+  border-color: #8f8f86;
+}
+
+.tag-btn.selected {
+  background: #4d6f7a;
+  border-color: #4d6f7a;
+  color: #fff;
+}
+
+.tag-btn.selected::before {
+  content: "✓ ";
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -37,7 +121,6 @@ article {
   font-size: 0.95rem;
   line-height: 1.2;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .pagination button:hover:not([disabled]) {

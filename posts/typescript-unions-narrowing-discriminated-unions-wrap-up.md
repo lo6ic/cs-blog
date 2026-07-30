@@ -5,6 +5,10 @@ published: true
 datePublished: "July 25, 2026"
 displayOrder: 2
 picture: "assets/posts/two.jpg"
+tags:
+  - typescript
+  - unions
+  - narrowing
 ---
 
 ### TypeScript Mastery: Unions, Narrowing, and Discriminated Unions

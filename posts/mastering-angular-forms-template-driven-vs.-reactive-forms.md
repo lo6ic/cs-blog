@@ -4,6 +4,10 @@ description: Angular provides two amazing ways to deal with forms.  Check out th
 published: true
 datePublished: November 30, 2024
 picture: "assets/posts/forms.jpg"
+tags:
+  - angular
+  - forms
+  - reactive-forms
 ---
 
 ### **Mastering Angular Forms: Template-Driven vs. Reactive Forms**

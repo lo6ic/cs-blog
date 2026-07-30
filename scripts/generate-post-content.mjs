@@ -18,6 +18,7 @@ const REQUIRED_FIELDS = [
   "published",
   "datePublished",
   "picture",
+  "tags",
 ];
 
 function parseFrontMatterValue(value) {
@@ -117,6 +118,13 @@ function assertValidPost(data, content, file, id) {
   if (typeof data.picture !== "string" || !data.picture.trim()) {
     throw new Error(`${file}: picture must be a non-empty string`);
   }
+  if (
+    !Array.isArray(data.tags) ||
+    data.tags.length !== 3 ||
+    data.tags.some((tag) => typeof tag !== "string" || !tag.trim())
+  ) {
+    throw new Error(`${file}: tags must be an array of exactly three strings`);
+  }
   if ("displayOrder" in data) {
     const displayOrder = Number(data.displayOrder);
     if (!Number.isInteger(displayOrder) || displayOrder < 1) {
@@ -212,6 +220,7 @@ for (const file of files) {
     datePublishedIso,
     ...(displayOrder !== undefined ? { displayOrder } : {}),
     picture: data.picture,
+    tags: data.tags,
     html,
   });
 }

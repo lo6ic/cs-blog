@@ -26,6 +26,9 @@ export class BlogComponent implements OnInit {
   // Search state
   private search$ = new BehaviorSubject<string>('');
   currentSearch$ = this.search$.asObservable();
+  private selectedTags$ = new BehaviorSubject<readonly string[]>([]);
+  currentSelectedTags$ = this.selectedTags$.asObservable();
+  availableTags$!: Observable<string[]>;
   private filteredPosts$!: Observable<PostSummary[]>;
 
   private comparePosts(a: PostSummary, b: PostSummary): number {
@@ -68,12 +71,33 @@ export class BlogComponent implements OnInit {
         map((posts) => [...posts].sort((a, b) => this.comparePosts(a, b))),
       );
 
-    this.filteredPosts$ = combineLatest([this.posts$, this.search$]).pipe(
-      map(([posts, term]) => {
+    this.availableTags$ = this.posts$.pipe(
+      map((posts) =>
+        Array.from(new Set(posts.flatMap((post) => post.tags))).sort(),
+      ),
+    );
+
+    this.filteredPosts$ = combineLatest([
+      this.posts$,
+      this.search$,
+      this.selectedTags$,
+    ]).pipe(
+      map(([posts, term, selectedTags]) => {
         const q = term.toLowerCase().trim();
-        if (!q) return posts;
 
         return posts.filter((p) => {
+          const matchesTags =
+            selectedTags.length === 0 ||
+            selectedTags.every((tag) => p.tags.includes(tag));
+
+          if (!matchesTags) {
+            return false;
+          }
+
+          if (!q) {
+            return true;
+          }
+
           const title = p.title.toLowerCase();
           const desc = p.description.toLowerCase();
           return title.includes(q) || desc.includes(q);
@@ -102,6 +126,11 @@ export class BlogComponent implements OnInit {
     if (initialQuery) {
       this.search$.next(initialQuery);
     }
+
+    const initialTags = this.parseTagsParam(qp.get('tags'));
+    if (initialTags.length > 0) {
+      this.selectedTags$.next(initialTags);
+    }
   }
 
   setPage(page: number, totalPages: number) {
@@ -124,7 +153,41 @@ export class BlogComponent implements OnInit {
     });
   }
 
+  toggleTag(tag: string) {
+    const current = this.selectedTags$.value;
+    const next = current.includes(tag)
+      ? current.filter((selectedTag) => selectedTag !== tag)
+      : [...current, tag].sort();
+
+    this.setSelectedTags(next);
+  }
+
+  clearTags() {
+    this.setSelectedTags([]);
+  }
+
   pagesArray(total: number): number[] {
     return Array.from({ length: total }, (_, i) => i + 1);
+  }
+
+  private parseTagsParam(value: string | null): string[] {
+    if (!value) {
+      return [];
+    }
+
+    return value
+      .split(',')
+      .map((tag) => tag.trim().toLowerCase())
+      .filter(Boolean);
+  }
+
+  private setSelectedTags(tags: readonly string[]) {
+    this.selectedTags$.next(tags);
+    this.page$.next(1);
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { tags: tags.length > 0 ? tags.join(',') : null, page: 1 },
+      queryParamsHandling: 'merge',
+    });
   }
 }
