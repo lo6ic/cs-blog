@@ -3,6 +3,8 @@ import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 
+import { VersionRefreshService } from './version-refresh.service';
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -18,9 +20,11 @@ declare global {
 export class AppComponent implements OnInit, OnDestroy {
   title = 'cs-blog';
   private routerSubscription?: Subscription;
+  private versionRefreshSubscription?: Subscription;
 
   constructor(
     private router: Router,
+    private versionRefreshService: VersionRefreshService,
     @Inject(PLATFORM_ID) private platformId: object,
   ) {}
 
@@ -38,9 +42,13 @@ export class AppComponent implements OnInit, OnDestroy {
           page_title: document.title,
         });
       });
+
+    this.versionRefreshSubscription =
+      this.versionRefreshService.refreshWhenRouteIsStale('/resume');
   }
 
   ngOnDestroy(): void {
     this.routerSubscription?.unsubscribe();
+    this.versionRefreshSubscription?.unsubscribe();
   }
 }

@@ -5,9 +5,10 @@
     "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
   },
   "scripts": {
-    "start": "npm run content:generate && ng serve",
+    "start": "npm run build-info:generate && npm run content:generate && ng serve",
+    "build-info:generate": "node ./scripts/generate-build-info.mjs",
     "content:generate": "node ./scripts/generate-post-content.mjs",
-    "build": "npm run content:generate && ng build",
+    "build": "npm run build-info:generate && npm run content:generate && ng build",
     "preview": "npx http-server dist/cs-blog/browser",
     "test": "ng test",
     "hello": "tsx scripts/helloworld.ts"
