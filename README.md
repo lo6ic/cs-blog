@@ -140,3 +140,5 @@ Workflow summary:
 - `dist/` is generated output and is ignored by git
 - The app uses Angular hydration on the client and Express for the SSR entrypoint
 - Google Analytics is configured in [`src/app/app.module.ts`](src/app/app.module.ts)
+
+- To run the .ts scripts in /scripts/ use 'npx tsx scripts/<name>.ts' from the bash terminal

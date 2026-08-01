@@ -2,6 +2,7 @@
 /contact
 /about
 /resume
+/posts/typescript-modeling-a-small-finance-domain
 /posts/typescript-functions-and-generics-intro
 /posts/typescript-unions-narrowing-discriminated-unions-wrap-up
 /posts/typescript-interfaces-vs-type-aliases-wrap-up
