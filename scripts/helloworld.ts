@@ -584,150 +584,286 @@ printTransactionSummary(transactions);*/
 
 //console.log(name + ' | ' + id);
 
-console.log('EXERCISES:');
+// console.log('EXERCISES:');
+// // Exercise 1
+// function formatCurrency(amount: number): string {
+//   return `$${amount.toFixed(2)}`;
+// }
+// console.log(formatCurrency(19));
+
+// console.log(formatCurrency(20.99));
+// function formatIsPositive(value: number): boolean {
+//   return value > 0;
+// }
+// console.log(formatIsPositive(9));
+// console.log(formatIsPositive(-9));
+
+// // Exercise 2
+// function identity<T>(value: T): T {
+//   return value;
+// }
+// const name = identity('Angular');
+// const count = identity(19);
+// const active = identity(true);
+// console.log(name);
+// console.log(count);
+// console.log(active);
+
+// // Exercise 3
+// function firstItem<T>(items: T[]): T | undefined {
+//   return items[0];
+// }
+// const firstNumber = firstItem([10, 20, 30]);
+// const firstString = firstItem(['Angular', 'TypeScript']);
+// const empty = firstItem([]);
+
+// console.log(firstNumber);
+// console.log(firstString);
+// console.log(empty);
+
+// // Exercise 4
+// type BudgetItem = {
+//   readonly id: number;
+//   label: string;
+//   amount: number;
+//   category: string;
+// };
+
+// function pluck<T, K extends keyof T>(item: T, key: K): T[K] {
+//   return item[key];
+// }
+// const budgetItem: BudgetItem = {
+//   id: 1,
+//   label: 'Angular Course',
+//   amount: 49.99,
+//   category: 'Education',
+// };
+
+// const label = pluck(budgetItem, 'label');
+// const amount = pluck(budgetItem, 'amount');
+// console.log(label);
+// console.log(amount);
+
+// type ApiResponse<T> =
+//   | { status: 'success'; data: T }
+//   | { status: 'error'; message: string };
+
+// type User = {
+//   readonly id: number;
+//   name: string;
+//   email: string;
+// };
+
+// const userSuccess: ApiResponse<User> = {
+//   status: 'success',
+//   data: {
+//     id: 1,
+//     name: 'Chris',
+//     email: 'chris@test.com',
+//   },
+// };
+// const userError: ApiResponse<User> = {
+//   status: 'error',
+//   message: 'There was an error with this user.',
+// };
+// const usersSuccess: ApiResponse<User[]> = {
+//   status: 'success',
+//   data: [
+//     {
+//       id: 2,
+//       name: 'Joe',
+//       email: 'joe@joe.com',
+//     },
+//     {
+//       id: 3,
+//       name: 'Kate',
+//       email: 'kate@kate.com',
+//     },
+//   ],
+// };
+
+// function renderApiResponse<T>(response: ApiResponse<T>): string {
+//   switch (response.status) {
+//     case 'success':
+//       return 'Success';
+//     case 'error':
+//       return `Error: ${response.message}`;
+//   }
+// }
+
+// // Exercise 6
+// // if response is error, return same error message
+// // if response is success, return success with mapped data
+
+// function mapApiResponse<T, U>(
+//   response: ApiResponse<T>,
+//   mapper: (data: T) => U,
+// ): ApiResponse<U> {
+//   switch (response.status) {
+//     case 'success':
+//       return {
+//         status: 'success',
+//         data: mapper(response.data),
+//       };
+
+//     case 'error':
+//       return {
+//         status: 'error',
+//         message: response.message,
+//       };
+//   }
+// }
+
+// const mappedName = mapApiResponse(userSuccess, (user) => user.name);
+// const mappedEmails = mapApiResponse(usersSuccess, (users) =>
+//   users.map((user) => user.email),
+// );
+
+// console.log(mappedName);
+// console.log(mappedEmails);
+
+// /*
+// what problems do generics solve?
+
+// Generics are useful to preserve data type for creating reusable code.  They are used so you don't need to fall
+// back and use 'any' or 'unkown'.  This keeps the TypeScript type feature alive and well.  They are used in
+// both input and output forms.
+
+// */
+
+// Day 20
+
 // Exercise 1
-function formatCurrency(amount: number): string {
-  return `$${amount.toFixed(2)}`;
-}
-console.log(formatCurrency(19));
+type TransactionStatus = 'pending' | 'cleared' | 'failed';
 
-console.log(formatCurrency(20.99));
-function formatIsPositive(value: number): boolean {
-  return value > 0;
-}
-console.log(formatIsPositive(9));
-console.log(formatIsPositive(-9));
+type TransactionType = 'income' | 'expense';
 
-// Exercise 2
-function identity<T>(value: T): T {
-  return value;
-}
-const name = identity('Angular');
-const count = identity(19);
-const active = identity(true);
-console.log(name);
-console.log(count);
-console.log(active);
+type TransactionCategory =
+  | 'education'
+  | 'groceries'
+  | 'transportation'
+  | 'entertainment'
+  | 'housing'
+  | 'income'
+  | 'uncategorized';
 
-// Exercise 3
-function firstItem<T>(items: T[]): T | undefined {
-  return items[0];
-}
-const firstNumber = firstItem([10, 20, 30]);
-const firstString = firstItem(['Angular', 'TypeScript']);
-const empty = firstItem([]);
-
-console.log(firstNumber);
-console.log(firstString);
-console.log(empty);
-
-// Exercise 4
-type BudgetItem = {
+type Transaction = {
   readonly id: number;
-  label: string;
+  readonly createdAt: string;
+  merchant: string;
   amount: number;
-  category: string;
+  type: TransactionType;
+  status: TransactionStatus;
+  category: TransactionCategory;
+  notes?: string;
 };
 
-function pluck<T, K extends keyof T>(item: T, key: K): T[K] {
-  return item[key];
-}
-const budgetItem: BudgetItem = {
-  id: 1,
-  label: 'Angular Course',
-  amount: 49.99,
-  category: 'Education',
+const trans1: Transaction = {
+  id: 111,
+  createdAt: '2026-01-02',
+  merchant: 'Target',
+  amount: 1,
+  type: 'expense',
+  status: 'cleared',
+  category: 'groceries',
+  notes: 'One dollar grocery item',
+};
+const trans2: Transaction = {
+  id: 112,
+  createdAt: '2026-06-02',
+  merchant: 'Contract Company',
+  amount: 100,
+  type: 'income',
+  status: 'cleared',
+  category: 'income',
+  notes: 'Contract work',
+};
+const trans3: Transaction = {
+  id: 113,
+  createdAt: '2026-06-02',
+  merchant: 'Best Buy',
+  amount: 150,
+  type: 'expense',
+  status: 'cleared',
+  category: 'uncategorized',
+  notes: 'Headphones',
+};
+const trans4: Transaction = {
+  id: 114,
+  createdAt: '2026-06-02',
+  merchant: 'Carz',
+  amount: 35.5,
+  type: 'expense',
+  status: 'cleared',
+  category: 'transportation',
+  notes: 'Uber-like driver',
 };
 
-const label = pluck(budgetItem, 'label');
-const amount = pluck(budgetItem, 'amount');
-console.log(label);
-console.log(amount);
-
-type ApiResponse<T> =
+// E 3
+type RequestState<T> =
+  | { status: 'idle' }
+  | { status: 'loading' }
   | { status: 'success'; data: T }
+  | { status: 'empty' }
   | { status: 'error'; message: string };
 
-type User = {
-  readonly id: number;
-  name: string;
-  email: string;
-};
-
-const userSuccess: ApiResponse<User> = {
+const arrayTransactions: Transaction[] = [trans1, trans2, trans3, trans4];
+const transactionSuccess: RequestState<Transaction[]> = {
   status: 'success',
-  data: {
-    id: 1,
-    name: 'Chris',
-    email: 'chris@test.com',
-  },
+  data: arrayTransactions,
 };
-const userError: ApiResponse<User> = {
+const transactionError: RequestState<Transaction[]> = {
   status: 'error',
-  message: 'There was an error with this user.',
+  message: 'No transactions',
 };
-const usersSuccess: ApiResponse<User[]> = {
-  status: 'success',
-  data: [
-    {
-      id: 2,
-      name: 'Joe',
-      email: 'joe@joe.com',
-    },
-    {
-      id: 3,
-      name: 'Kate',
-      email: 'kate@kate.com',
-    },
-  ],
+const transactionEmpty: RequestState<Transaction[]> = {
+  status: 'empty',
 };
 
-function renderApiResponse<T>(response: ApiResponse<T>): string {
-  switch (response.status) {
-    case 'success':
-      return 'Success';
-    case 'error':
-      return `Error: ${response.message}`;
-  }
+// E 4
+type TransactionFilter = {
+  status?: TransactionStatus;
+  type?: TransactionType;
+  category?: TransactionCategory;
+  minAmount?: number;
+  maxAmount?: number;
+};
+
+function filterTransactions(
+  transactions: readonly Transaction[],
+  filter: TransactionFilter,
+): Transaction[] {
+  return transactions.filter((transaction) => {
+    if (filter.status && transaction.status != filter.status) return false;
+    if (filter.type && transaction.type != filter.type) return false;
+    if (filter.category && transaction.category != filter.category)
+      return false;
+    if (
+      filter.minAmount !== undefined &&
+      transaction.amount < filter.minAmount
+    ) {
+      return false;
+    }
+
+    if (
+      filter.maxAmount !== undefined &&
+      transaction.amount > filter.maxAmount
+    ) {
+      return false;
+    }
+
+    return true;
+  });
 }
 
-// Exercise 6
-// if response is error, return same error message
-// if response is success, return success with mapped data
+const clearedExpenses = filterTransactions(arrayTransactions, {
+  status: 'cleared',
+  type: 'expense',
+});
 
-function mapApiResponse<T, U>(
-  response: ApiResponse<T>,
-  mapper: (data: T) => U,
-): ApiResponse<U> {
-  switch (response.status) {
-    case 'success':
-      return {
-        status: 'success',
-        data: mapper(response.data),
-      };
+const educationTransactions = filterTransactions(arrayTransactions, {
+  category: 'education',
+});
 
-    case 'error':
-      return {
-        status: 'error',
-        message: response.message,
-      };
-  }
-}
-
-const mappedName = mapApiResponse(userSuccess, (user) => user.name);
-const mappedEmails = mapApiResponse(usersSuccess, (users) =>
-  users.map((user) => user.email),
-);
-
-console.log(mappedName);
-console.log(mappedEmails);
-
-/*
-what problems do generics solve?
-
-Generics are useful to preserve data type for creating reusable code.  They are used so you don't need to fall 
-back and use 'any' or 'unkown'.  This keeps the TypeScript type feature alive and well.  They are used in 
-both input and output forms.
-
-
-*/
+console.log('cleared expenses: ', clearedExpenses);
+console.log('education transactions: ', educationTransactions);
