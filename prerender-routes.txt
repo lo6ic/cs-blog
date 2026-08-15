@@ -2,6 +2,7 @@
 /contact
 /about
 /resume
+/posts/typescript-generics-constraints-and-key-relationships
 /posts/typescript-checkpoint-1-communicating-intent
 /posts/typescript-modeling-a-small-finance-domain
 /posts/typescript-functions-and-generics-intro
