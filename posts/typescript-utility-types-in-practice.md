@@ -12,7 +12,7 @@ tags:
 
 # TypeScript Mastery: Utility Types in Practice
 
-**Date:** August 20, 2026
+August 20, 2026
 
 Utility types are one of the places where TypeScript starts to feel less like a type annotation tool and more like a modeling tool.
 
