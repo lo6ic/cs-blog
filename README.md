@@ -76,10 +76,20 @@ Required front matter fields for each post:
 - `datePublished`
 - `picture`
 
-Posts can also include optional `displayOrder` front matter when more than one
-post shares the same `datePublished`. Sorting checks the date first. Only when
-two posts have the same date, the higher `displayOrder` appears first. For
-example, `displayOrder: 2` appears before `displayOrder: 1` on the same day.
+### Ordering Posts Published on the Same Day
+
+Use the optional `displayOrder` front-matter property when more than one post
+has the same `datePublished`:
+
+```yaml
+datePublished: "July 25, 2026"
+displayOrder: 2
+```
+
+Posts are sorted by publication date first. When two posts have the same date,
+the post with the higher `displayOrder` appears first, so `displayOrder: 2`
+appears before `displayOrder: 1`. The value must be a positive integer. If it is
+omitted, it is treated as `0` for sorting.
 
 Post routes are derived from the markdown filename. For example, `posts/my-post.md` becomes `/posts/my-post`.
 
@@ -141,4 +151,4 @@ Workflow summary:
 - The app uses Angular hydration on the client and Express for the SSR entrypoint
 - Google Analytics is configured in [`src/app/app.module.ts`](src/app/app.module.ts)
 
-- To run the .ts scripts in /scripts/ use 'npx tsx scripts/<name>.ts' from the bash terminal
+- To run the .ts scripts in /scripts/ use 'npx tsx scripts/<name>.ts' from the bash terminal NOTE THE X IN BOTH COMMANDS

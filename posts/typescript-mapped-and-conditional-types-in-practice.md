@@ -8,6 +8,7 @@ tags:
   - typescript
   - mapped-types
   - conditional-types
+displayOrder: 1
 ---
 
 # TypeScript Mastery: Mapped and Conditional Types in Practice
