@@ -2,6 +2,7 @@
 /contact
 /about
 /resume
+/posts/typescript-strict-mode-and-code-quality
 /posts/typescript-classes-access-modifiers-and-abstract-classes
 /posts/typescript-mapped-and-conditional-types-in-practice
 /posts/typescript-utility-types-in-practice
