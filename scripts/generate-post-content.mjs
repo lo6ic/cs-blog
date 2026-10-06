@@ -6,6 +6,9 @@ const POSTS_DIR = path.resolve("./posts");
 const OUTPUT_DIR = path.resolve("./src/app/content/generated");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "posts.generated.ts");
 
+const ASSETS_DIR = path.resolve("./src/assets");
+const SITE_URL = "https://christopherschedler.com";
+
 const md = new MarkdownIt({
   html: true,
   linkify: true,
@@ -173,6 +176,61 @@ function comparePosts(a, b) {
   return a.sourceFile.localeCompare(b.sourceFile);
 }
 
+function generateSitemap(postRoutes) {
+  const staticRoutes = [
+    "/blog",
+    "/contact",
+    "/about",
+    "/resume",
+  ];
+
+  const sitemapRoutes = [...staticRoutes, ...postRoutes];
+
+  const urls = sitemapRoutes
+    .map(
+      (route) => `  <url>
+    <loc>${escapeXml(`${SITE_URL}${route}`)}</loc>
+  </url>`,
+    )
+    .join("\n");
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
+
+  fs.mkdirSync(ASSETS_DIR, { recursive: true });
+  fs.writeFileSync(
+    path.join(ASSETS_DIR, "sitemap.xml"),
+    sitemap,
+    "utf-8",
+  );
+
+  console.log(
+    `Generated sitemap with ${sitemapRoutes.length} URLs -> ${path.join(ASSETS_DIR, "sitemap.xml")}`,
+  );
+}
+
+function generateRobotsTxt() {
+  const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`;
+
+  fs.mkdirSync(ASSETS_DIR, { recursive: true });
+  fs.writeFileSync(
+    path.join(ASSETS_DIR, "robots.txt"),
+    robotsTxt,
+    "utf-8",
+  );
+
+  console.log(
+    `Generated robots.txt -> ${path.join(ASSETS_DIR, "robots.txt")}`,
+  );
+}
+
 const files = fs
   .readdirSync(POSTS_DIR)
   .filter((f) => f.endsWith(".md"))
@@ -268,3 +326,16 @@ const routesFilePath = path.resolve("./prerender-routes.txt");
 fs.writeFileSync(routesFilePath, prerenderRoutes.join("\n") + "\n", "utf-8");
 
 console.log(`Generated prerender routes -> ${routesFilePath}`);
+
+function escapeXml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+generateSitemap(routes);
+
+generateRobotsTxt();
