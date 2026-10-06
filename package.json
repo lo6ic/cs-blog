@@ -73,7 +73,8 @@
     "undici": "7.29.1",
     "vite": "7.3.6",
     "ws": "8.21.0",
-    "ip-address": "10.7.3"
+    "ip-address": "10.7.3",
+    "source-map-js": "1.2.2"
   },
   "devDependencies": {
     "@angular/build": "^21.2.25",
@@ -82,13 +83,13 @@
     "@tailwindcss/typography": "^0.5.13",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
-    "autoprefixer": "^10.4.19",
-    "daisyui": "^4.12.10",
+    "daisyui": "^5.7.47",
     "jsdom": "^24.1.0",
     "postcss": "^8.5.18",
-    "tailwindcss": "^3.4.6",
+    "tailwindcss": "^4.3.3",
     "tsx": "^4.23.1",
     "typescript": "~5.9.3",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "@tailwindcss/postcss": "^4.3.3"
   }
 }
