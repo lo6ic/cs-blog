@@ -13,21 +13,53 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
     title: 'Christopher Schedler - Contact',
+    data: {
+      seo: {
+        title: 'Christopher Schedler - Contact',
+        description:
+          'Contact Christopher Schedler, a software engineer specializing in Angular, TypeScript, JavaScript, and modern web development.',
+        path: '/contact',
+      },
+    },
   },
   {
     path: 'about',
     component: AboutComponent,
     title: 'Christopher Schedler - About',
+    data: {
+      seo: {
+        title: 'Christopher Schedler - About',
+        description:
+          'Learn more about Christopher Schedler, a software engineer focused on Angular, TypeScript, JavaScript, and modern front-end development.',
+        path: '/about',
+      },
+    },
   },
   {
     path: 'resume',
     component: ResumeComponent,
     title: 'Christopher Schedler - Resume',
+    data: {
+      seo: {
+        title: 'Christopher Schedler - Resume',
+        description:
+          'View Christopher Schedler’s software engineering experience, technical skills, professional background, and web development resume.',
+        path: '/resume',
+      },
+    },
   },
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
     title: 'Christopher Schedler - Blog',
+    data: {
+      seo: {
+        title: 'Christopher Schedler - Software Development Blog',
+        description:
+          'Articles by Christopher Schedler about Angular, TypeScript, JavaScript, front-end development, and modern software engineering.',
+        path: '/blog',
+      },
+    },
   },
   {
     path: '',

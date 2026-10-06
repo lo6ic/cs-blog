@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '../content/content.service';
 import type { PostDocument } from '../content/content.models';
 
+import { SeoService } from '../seo.service';
+
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -25,6 +27,7 @@ export class PostsComponent implements OnInit {
   constructor(
     private contentService: ContentService,
     private activatedRoute: ActivatedRoute,
+    private seoService: SeoService,
     @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
@@ -34,6 +37,13 @@ export class PostsComponent implements OnInit {
 
       this.contentService.getPostById(id).subscribe((post) => {
         this.post = post;
+        if (post) {
+          this.seoService.update({
+            title: post.title,
+            description: post.description,
+            path: post.route,
+          });
+        }
 
         if (isPlatformBrowser(this.platformId)) {
           const photoTop = document.getElementById('photo-top');

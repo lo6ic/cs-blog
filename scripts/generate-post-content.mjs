@@ -189,7 +189,7 @@ function generateSitemap(postRoutes) {
   const urls = sitemapRoutes
     .map(
       (route) => `  <url>
-    <loc>${escapeXml(`${SITE_URL}${route}`)}</loc>
+    <loc>${escapeXml(toCanonicalUrl(route))}</loc>
   </url>`,
     )
     .join("\n");
@@ -210,6 +210,19 @@ ${urls}
   console.log(
     `Generated sitemap with ${sitemapRoutes.length} URLs -> ${path.join(ASSETS_DIR, "sitemap.xml")}`,
   );
+}
+
+function toCanonicalUrl(route) {
+  if (!route || route === "/") {
+    return `${SITE_URL}/`;
+  }
+
+  const normalizedRoute = route.startsWith("/") ? route : `/${route}`;
+  const pathWithTrailingSlash = normalizedRoute.endsWith("/")
+    ? normalizedRoute
+    : `${normalizedRoute}/`;
+
+  return `${SITE_URL}${pathWithTrailingSlash}`;
 }
 
 function generateRobotsTxt() {
