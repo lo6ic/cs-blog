@@ -88,7 +88,7 @@ export class BlogComponent implements OnInit {
         return posts.filter((p) => {
           const matchesTags =
             selectedTags.length === 0 ||
-            selectedTags.every((tag) => p.tags.includes(tag));
+            selectedTags.some((tag) => p.tags.includes(tag));
 
           if (!matchesTags) {
             return false;
